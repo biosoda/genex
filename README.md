@@ -1,6 +1,6 @@
 # GenEx semantic model
 
-The GenEx documentation is available at[LINK](http://genex.github.io/genex/).
+The GenEx documentation is available at [https://biosoda.github.io/genex/](https://biosoda.github.io/genex/).
 
 genex.owl file only includes concepts and relations from the imported ontologies (e.g.: RO, CARO, EFO, UniProt core ontologies)
  that are relevants to represent gene expression information. 
