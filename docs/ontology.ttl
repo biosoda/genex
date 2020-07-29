@@ -42,15 +42,16 @@
 
 
 ###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
+<http://purl.org/dc/elements/1.1/description> rdf:type rdf:Property ;
                                               <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
                                               rdfs:comment "An account of the resource."@en ;
                                               rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                              rdfs:range rdfs:Literal ;
                                               rdfs:label "Description"@en .
 
 
 ###  http://purl.org/dc/terms/description
-<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty ;
+<http://purl.org/dc/terms/description> rdf:type rdf:Property ;
                                        <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
                                        rdfs:comment "An account of the resource."@en ;
                                        rdfs:isDefinedBy <http://purl.org/dc/terms/> ;

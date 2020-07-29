@@ -56,15 +56,16 @@ obo:IAO_0000600 rdf:type owl:AnnotationProperty ;
 
 
 ###  http://purl.org/dc/elements/1.1/description
-dc:description rdf:type owl:AnnotationProperty ;
+dc:description rdf:type rdf:Property ;
                terms:description "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
                rdfs:comment "An account of the resource."@en ;
                rdfs:isDefinedBy dc: ;
+               rdfs:range rdfs:Literal ;
                rdfs:label "Description"@en .
 
 
 ###  http://purl.org/dc/terms/description
-terms:description rdf:type owl:AnnotationProperty ;
+terms:description rdf:type rdf:Property ;
                   terms:description "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
                   rdfs:comment "An account of the resource."@en ;
                   rdfs:isDefinedBy terms: ;

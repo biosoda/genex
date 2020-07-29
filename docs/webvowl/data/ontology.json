@@ -1564,6 +1564,17 @@
     "domain" : "3",
     "attributes" : [ "datatype", "functional" ],
     "id" : "83"
+  },{
+    "iri" : "http://purl.org/dc/elements/1.1/description",
+    "baseIri" : "http://purl.org/dc/elements/1.1/",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "description",
+      "en" : "Description"
+    },
+    "domain" : "16",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "84"
   }, {
     "iri" : "http://purl.org/dc/terms/identifier",
     "baseIri" : "http://purl.org/dc/terms",
