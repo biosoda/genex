@@ -372,10 +372,13 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
 #################################################################
 
 ###  http://purl.org/dc/terms/identifier
-<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
-                                      rdfs:range xsd:string ;
-                                      rdfs:label "identifier"@en .
-
+<http://purl.org/dc/terms/identifier>
+    <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs."@en ;
+    a rdf:Property ;
+    rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+    rdfs:label "Identifier"@en ;
+    rdfs:range rdfs:Literal .
 
 ###  http://purl.org/genex#hasExpressionLevel
 :hasExpressionLevel rdf:type owl:DatatypeProperty ;
@@ -411,25 +414,6 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
                                ]
                    ] .
 
-
-###  http://purl.org/net/orth#taxRange
-<http://purl.org/net/orth#taxRange> rdf:type owl:DatatypeProperty ;
-                                    rdfs:domain <http://purl.org/net/orth#TaxonomicRange> ;
-                                    rdfs:range xsd:string ;
-                                    rdfs:comment "Property that stores the name of the taxonomic range at which a given cluster of homologs has been calculated"@en ;
-                                    rdfs:label "tax range"@en .
-
-
-###  http://purl.org/net/orth#taxRangeId
-<http://purl.org/net/orth#taxRangeId> rdf:type owl:DatatypeProperty ;
-                                      rdfs:range xsd:integer ;
-                                      rdfs:comment "This property links a cluster of homologs with its taxonomic range."@en ;
-                                      rdfs:label "tax range id"@en .
-
-
-###  http://purl.org/pav/version
-<http://purl.org/pav/version> rdf:type owl:DatatypeProperty ;
-                              rdfs:label "Version"@en .
 
 
 ###  http://purl.uniprot.org/core/commonName
@@ -513,12 +497,6 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "Entity that is, is part of, or derived from an organism, virus, or viroid or a collection of them." ;
                                               rdfs:comment "Important for alignment with Darwin Core class \"Organism\"." ;
                                               rdfs:label "biological entity" .
-
-
-###  http://purl.obolibrary.org/obo/CDAO_0000138
-<http://purl.obolibrary.org/obo/CDAO_0000138> rdf:type owl:Class ;
-                                              <http://purl.org/dc/elements/1.1/description> "A unit of analysis that may be tied to a node in a tree and to a row in a character matrix.  It subsumes the traditional concepts of 'OTU' and 'HTU'." ;
-                                              rdfs:label "TU" .
 
 
 ###  http://purl.obolibrary.org/obo/CDAO_0000140
@@ -709,13 +687,6 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
                                    rdfs:label "gene region"@en ,
                                               "region of a gene"@en ,
                                               "subgene"@en .
-
-
-###  http://purl.org/net/orth#TaxonomicRange
-<http://purl.org/net/orth#TaxonomicRange> rdf:type owl:Class ;
-                                          rdfs:comment "The taxonomic level represents the taxon at which a group of sequences are considered members of the same cluster of orthologs/paralogs"@en ;
-                                          rdfs:label "Taxonomic level"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Taxonomic range"@en .
 
 
 ###  http://purl.uniprot.org/core/Rank

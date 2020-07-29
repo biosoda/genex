@@ -678,19 +678,6 @@
     "id" : "51",
     "superClasses" : [ "5" ]
   }, {
-    "iri" : "http://purl.obolibrary.org/obo/CDAO_0000138",
-    "baseIri" : "http://purl.obolibrary.org/obo",
-    "instances" : 0,
-    "description" : {
-      "undefined" : "A unit of analysis that may be tied to a node in a tree and to a row in a character matrix.  It subsumes the traditional concepts of 'OTU' and 'HTU'."
-    },
-    "label" : {
-      "IRI-based" : "CDAO_0000138",
-      "undefined" : "TU"
-    },
-    "attributes" : [ "external" ],
-    "id" : "55"
-  }, {
     "iri" : "http://purl.uniprot.org/core/Rank",
     "baseIri" : "http://purl.uniprot.org/core",
     "instances" : 0,
@@ -970,27 +957,6 @@
     "attributes" : [ "external" ],
     "id" : "73",
     "superClasses" : [ "40" ]
-  }, {
-    "iri" : "http://purl.org/net/orth#TaxonomicRange",
-    "baseIri" : "http://purl.org/net/orth",
-    "instances" : 0,
-    "annotations" : {
-      "altLabel" : [ {
-        "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "Taxonomic range",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "TaxonomicRange",
-      "en" : "Taxonomic level"
-    },
-    "comment" : {
-      "en" : "The taxonomic level represents the taxon at which a group of sequences are considered members of the same cluster of orthologs/paralogs"
-    },
-    "attributes" : [ "external" ],
-    "id" : "45"
   }, {
     "iri" : "http://purl.org/genex#AnatomicalEntity",
     "baseIri" : "http://purl.org/genex",
@@ -1378,18 +1344,7 @@
     },
     "attributes" : [ "external", "object", "functional" ],
     "id" : "25"
-  }, {
-    "iri" : "http://purl.org/pav/version",
-    "baseIri" : "http://purl.org/pav",
-    "range" : "18",
-    "label" : {
-      "IRI-based" : "version",
-      "en" : "Version"
-    },
-    "domain" : "16",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "27"
-  }, {
+  },  {
     "iri" : "http://purl.org/genex#hasExpressionCondition",
     "baseIri" : "http://purl.org/genex",
     "range" : "3",
@@ -1432,21 +1387,7 @@
     "domain" : "7",
     "attributes" : [ "datatype" ],
     "id" : "41"
-  }, {
-    "iri" : "http://purl.org/net/orth#taxRange",
-    "baseIri" : "http://purl.org/net/orth",
-    "range" : "22",
-    "label" : {
-      "IRI-based" : "taxRange",
-      "en" : "tax range"
-    },
-    "domain" : "45",
-    "comment" : {
-      "en" : "Property that stores the name of the taxonomic range at which a given cluster of homologs has been calculated"
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "44"
-  }, {
+  },  {
     "iri" : "http://purl.obolibrary.org/obo/RO_0002246",
     "baseIri" : "http://purl.obolibrary.org/obo",
     "range" : "16",
@@ -1529,21 +1470,7 @@
     },
     "attributes" : [ "external", "object" ],
     "id" : "61"
-  }, {
-    "iri" : "http://purl.org/net/orth#taxRangeId",
-    "baseIri" : "http://purl.org/net/orth",
-    "range" : "20",
-    "label" : {
-      "IRI-based" : "taxRangeId",
-      "en" : "tax range id"
-    },
-    "domain" : "16",
-    "comment" : {
-      "en" : "This property links a cluster of homologs with its taxonomic range."
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "62"
-  }, {
+  },  {
     "iri" : "http://purl.org/genex#hasExpressionCharacteristic",
     "baseIri" : "http://purl.org/genex",
     "range" : "35",
@@ -1676,7 +1603,7 @@
   }, {
     "iri" : "http://purl.org/dc/terms/identifier",
     "baseIri" : "http://purl.org/dc/terms",
-    "range" : "28",
+    "range" : "18",
     "label" : {
       "IRI-based" : "identifier",
       "en" : "identifier"

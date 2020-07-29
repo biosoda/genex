@@ -392,9 +392,13 @@ sio:SIO_010078 rdf:type owl:ObjectProperty ;
 #################################################################
 
 ###  http://purl.org/dc/terms/identifier
-terms:identifier rdf:type owl:DatatypeProperty ;
-                 rdfs:range xsd:string ;
-                 rdfs:label "identifier"@en .
+terms:identifier
+    terms:description "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs."@en ;
+    a rdf:Property ;
+    rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+    rdfs:label "Identifier"@en ;
+    rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/genex#hasExpressionLevel
@@ -430,26 +434,6 @@ terms:identifier rdf:type owl:DatatypeProperty ;
                                           ]
                                ]
                    ] .
-
-
-###  http://purl.org/net/orth#taxRange
-orth:taxRange rdf:type owl:DatatypeProperty ;
-              rdfs:domain orth:TaxonomicRange ;
-              rdfs:range xsd:string ;
-              rdfs:comment "Property that stores the name of the taxonomic range at which a given cluster of homologs has been calculated"@en ;
-              rdfs:label "tax range"@en .
-
-
-###  http://purl.org/net/orth#taxRangeId
-orth:taxRangeId rdf:type owl:DatatypeProperty ;
-                rdfs:range xsd:integer ;
-                rdfs:comment "This property links a cluster of homologs with its taxonomic range."@en ;
-                rdfs:label "tax range id"@en .
-
-
-###  http://purl.org/pav/version
-pav:version rdf:type owl:DatatypeProperty ;
-            rdfs:label "Version"@en .
 
 
 ###  http://purl.uniprot.org/core/commonName
@@ -729,13 +713,6 @@ orth:Subgene rdf:type owl:Class ;
              rdfs:label "gene region"@en ,
                         "region of a gene"@en ,
                         "subgene"@en .
-
-
-###  http://purl.org/net/orth#TaxonomicRange
-orth:TaxonomicRange rdf:type owl:Class ;
-                    rdfs:comment "The taxonomic level represents the taxon at which a group of sequences are considered members of the same cluster of orthologs/paralogs"@en ;
-                    rdfs:label "Taxonomic level"@en ;
-                    skos:altLabel "Taxonomic range"@en .
 
 
 ###  http://purl.uniprot.org/core/Rank
