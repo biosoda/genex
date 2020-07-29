@@ -518,13 +518,6 @@ obo:CARO_0030000 rdf:type owl:Class ;
                  rdfs:comment "Important for alignment with Darwin Core class \"Organism\"." ;
                  rdfs:label "biological entity" .
 
-
-###  http://purl.obolibrary.org/obo/CDAO_0000138
-obo:CDAO_0000138 rdf:type owl:Class ;
-                 dc:description "A unit of analysis that may be tied to a node in a tree and to a row in a character matrix.  It subsumes the traditional concepts of 'OTU' and 'HTU'." ;
-                 rdfs:label "TU" .
-
-
 ###  http://purl.obolibrary.org/obo/CDAO_0000140
 obo:CDAO_0000140 rdf:type owl:Class ;
                  rdfs:comment "Basic unit of graphs and trees"@en ;
