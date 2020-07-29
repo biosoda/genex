@@ -105,10 +105,7 @@
   }, {
     "id" : "51",
     "type" : "owl:equivalentClass"
-  }, {
-    "id" : "55",
-    "type" : "owl:Class"
-  }, {
+  },  {
     "id" : "26",
     "type" : "owl:Class"
   }, {
@@ -138,10 +135,7 @@
   }, {
     "id" : "73",
     "type" : "owl:Class"
-  }, {
-    "id" : "45",
-    "type" : "owl:Class"
-  }, {
+  },  {
     "id" : "14",
     "type" : "owl:Class"
   }, {
@@ -285,14 +279,7 @@
       "IRI-based" : "Literal",
       "undefined" : "Literal"
     }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "20",
-    "label" : {
-      "IRI-based" : "integer"
-    }
-  }, {
+  },  {
     "iri" : "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass",
     "baseIri" : "http://www.geneontology.org/formats/oboInOwl",
     "instances" : 0,
@@ -301,14 +288,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "21"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "22",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
+  },  {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "23",
@@ -345,14 +325,7 @@
     "attributes" : [ "external" ],
     "id" : "15",
     "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "28",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
+  },  {
     "instances" : 0,
     "union" : [ "30", "3", "14", "31" ],
     "attributes" : [ "anonymous", "union" ],
@@ -1155,10 +1128,7 @@
   }, {
     "id" : "25",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "27",
-    "type" : "owl:datatypeProperty"
-  }, {
+  },  {
     "id" : "37",
     "type" : "owl:objectProperty"
   }, {
@@ -1167,10 +1137,7 @@
   }, {
     "id" : "41",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "44",
-    "type" : "owl:datatypeProperty"
-  }, {
+  },  {
     "id" : "47",
     "type" : "owl:objectProperty"
   }, {
@@ -1194,10 +1161,7 @@
   }, {
     "id" : "61",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "62",
-    "type" : "owl:datatypeProperty"
-  }, {
+  },  {
     "id" : "64",
     "type" : "owl:objectProperty"
   }, {
