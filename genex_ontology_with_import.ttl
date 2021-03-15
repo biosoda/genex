@@ -26,7 +26,8 @@
                                      obo:iao.owl ,
                                      efo:efo.owl ,
                                      obo:ro.owl ,
-                                     <http://www.w3.org/2004/02/skos/core> ;
+                                     <http://www.w3.org/2004/02/skos/core>,
+                                     <http://purl.org/lscr> ;
                          owl:versionInfo "Gene expression (GenEx) ontology 0.1 version. Author: Tarcisio Mendes de Farias (tarcisio.mendesdefarias@unil.ch). Contributors: Frédéric Bastian, Julien Wollbrett, Christophe Dessimoz and Marc Robinson-Rechavi."@en .
 
 #################################################################

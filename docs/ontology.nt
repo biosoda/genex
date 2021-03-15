@@ -205,6 +205,7 @@ _:ub1bL1098C75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.
 <http://www.ebi.ac.uk/efo/alternative_term> <http://www.w3.org/2000/01/rdf-schema#label> "alternative_term" .
 <http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/2000/01/rdf-schema#label> "example"@en .
 <http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/2004/02/skos/core#definition> "A general note, for any purpose."@en .
+<http://purl.org/genex> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/lscr> .
 <http://purl.org/genex> <http://www.w3.org/2002/07/owl#versionInfo> "Gene expression (GenEx) ontology 0.1 version. Author: Tarcisio Mendes de Farias (tarcisio.mendesdefarias@unil.ch). Contributors: Fr\u00E9d\u00E9ric Bastian, Julien Wollbrett, Christophe Dessimoz and Marc Robinson-Rechavi."@en .
 _:ub1bL977C65 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#cond> .
 _:ub1bL1009C1 <http://www.w3.org/2003/11/swrl#body> _:ub1bL1010C42 .

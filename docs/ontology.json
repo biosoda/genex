@@ -1381,7 +1381,6 @@
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/identifier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs."
@@ -1403,6 +1402,9 @@
 }, {
   "@id" : "http://purl.org/genex",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://purl.org/lscr"
+  } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
     "@value" : "Gene expression (GenEx) ontology 0.1 version. Author: Tarcisio Mendes de Farias (tarcisio.mendesdefarias@unil.ch). Contributors: Frédéric Bastian, Julien Wollbrett, Christophe Dessimoz and Marc Robinson-Rechavi."

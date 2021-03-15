@@ -7,6 +7,7 @@
 @base <http://purl.org/genex> .
 
 <http://purl.org/genex> rdf:type owl:Ontology ;
+                        owl:imports <http://purl.org/lscr> ;
                          owl:versionInfo "Gene expression (GenEx) ontology 0.1 version. Author: Tarcisio Mendes de Farias (tarcisio.mendesdefarias@unil.ch). Contributors: Frédéric Bastian, Julien Wollbrett, Christophe Dessimoz and Marc Robinson-Rechavi."@en .
 
 #################################################################
