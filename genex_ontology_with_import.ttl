@@ -405,7 +405,11 @@ terms:identifier
 
 ###  http://purl.org/genex#hasExpressionLevel
 :hasExpressionLevel rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :Expression ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :AbsenceExpression
+                                                :Expression
+                                              )
+                                ]  ;
                     rdfs:range xsd:double ;
                     rdfs:label "has expression level score"@en ;
                     skos:altLabel "expression score"@en .

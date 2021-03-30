@@ -384,7 +384,11 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
 
 ###  http://purl.org/genex#hasExpressionLevel
 :hasExpressionLevel rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :Expression ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :AbsenceExpression
+                                                :Expression
+                                              )
+                                ]  ;
                     rdfs:range xsd:double ;
                     rdfs:label "has expression level score"@en ;
                     <http://www.w3.org/2004/02/skos/core#altLabel> "expression score"@en .
