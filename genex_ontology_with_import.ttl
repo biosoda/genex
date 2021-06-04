@@ -28,7 +28,8 @@
                                      obo:ro.owl ,
                                      <http://www.w3.org/2004/02/skos/core>,
                                      <http://purl.org/lscr> ;
-                         owl:versionInfo "Gene expression (GenEx) ontology 0.1 version. Author: Tarcisio Mendes de Farias (tarcisio.mendesdefarias@unil.ch). Contributors: Frédéric Bastian, Julien Wollbrett, Christophe Dessimoz and Marc Robinson-Rechavi."@en .
+                         owl:versionInfo "Gene expression (GenEx) ontology 0.1 version. Author: Tarcisio Mendes de Farias (tarcisio.mendesdefarias@unil.ch). Contributors: Frédéric Bastian, Julien Wollbrett, Christophe Dessimoz and Marc Robinson-Rechavi."@en  ;
+                         terms:modified "2021-06-04"^^<http://www.w3.org/2001/XMLSchema#date> .
 
 #################################################################
 #    Annotation properties
@@ -402,6 +403,16 @@ terms:identifier
     rdfs:label "Identifier"@en ;
     rdfs:range rdfs:Literal .
 
+###  http://purl.org/genex#hasFDRpvalue
+:hasFDRpvalue rdf:type owl:DatatypeProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :AbsenceExpression
+                                                :Expression
+                                              )
+                                ]  ;
+                    rdfs:range xsd:double ;
+                    rdfs:label "has false discovery rate p-value"@en ;
+                    skos:altLabel "has FDR p-value"@en .
 
 ###  http://purl.org/genex#hasExpressionLevel
 :hasExpressionLevel rdf:type owl:DatatypeProperty ;
@@ -418,9 +429,13 @@ terms:identifier
 ###  http://purl.org/genex#hasSex
 :hasSex rdf:type owl:DatatypeProperty ,
                  owl:FunctionalProperty ;
+                 terms:modified "2021-06-04"^^<http://www.w3.org/2001/XMLSchema#date> ;
+                 skos:changeNote "Added the following value in the range list: any." ;
         rdfs:domain :ExpressionCondition ;
         rdfs:range [ rdf:type rdfs:Datatype ;
                      owl:oneOf [ rdf:type rdf:List ;
+                                 rdf:first "any"^^xsd:string ;
+                                 rdf:rest [ rdf:type rdf:List ;
                                  rdf:first "NA"^^xsd:string ;
                                  rdf:rest [ rdf:type rdf:List ;
                                             rdf:first "female"^^xsd:string ;
@@ -439,7 +454,8 @@ terms:identifier
                                                      ]
                                           ]
                                ]
-                   ] .
+                   ] ].
+
 
 
 ###  http://purl.uniprot.org/core/commonName

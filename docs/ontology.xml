@@ -1,10 +1,14 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.org/genex#"
      xml:base="http://purl.org/genex"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:up="http://purl.uniprot.org/core/"
      xmlns:efo="http://www.ebi.ac.uk/efo/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pav="http://purl.org/pav/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sio="http://semanticscience.org/resource/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:lscr="http://purl.org/lscr#"
@@ -12,12 +16,15 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:uberon="http://purl.obolibrary.org/obo/uberon#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.org/genex">
         <owl:imports rdf:resource="http://purl.org/lscr"/>
-        <owl:versionInfo xml:lang="en">Gene expression (GenEx) ontology 0.1 version. Author: Tarcisio Mendes de Farias (tarcisio.mendesdefarias@unil.ch). Contributors: Frédéric Bastian, Julien Wollbrett, Christophe Dessimoz and Marc Robinson-Rechavi.</owl:versionInfo>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-04</terms:modified>
+        <owl:versionInfo xml:lang="en">Gene expression (GenEx) ontology 0.2 version. Author: Tarcisio Mendes de Farias (tarcisio.mendesdefarias@unil.ch). Contributors: Frédéric Bastian, Julien Wollbrett, Christophe Dessimoz and Marc Robinson-Rechavi.</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -44,7 +51,7 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
-        <rdfs:label>definition</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">definition</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -87,6 +94,12 @@
     
 
 
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
     <!-- http://purl.org/net/orth#inDatabase -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/net/orth#inDatabase">
@@ -100,8 +113,8 @@
     <!-- http://www.ebi.ac.uk/efo/NCI_Thesaurus_definition_citation -->
 
     <owl:AnnotationProperty rdf:about="http://www.ebi.ac.uk/efo/NCI_Thesaurus_definition_citation">
-        <obo:IAO_0000115>http://www.ebi.ac.uk/efo/NCI_Thesaurus_definition_citation is an annotation property that is drawn from NCI_Thesaurus</obo:IAO_0000115>
-        <efo:NCI_Thesaurus_definition_citation>http://www.ebi.ac.uk/efo/NCI_Thesaurus_definition_citation is an annotation property that is drawn from NCI_Thesaurus</efo:NCI_Thesaurus_definition_citation>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.ebi.ac.uk/efo/NCI_Thesaurus_definition_citation is an annotation property that is drawn from NCI_Thesaurus</obo:IAO_0000115>
+        <efo:NCI_Thesaurus_definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.ebi.ac.uk/efo/NCI_Thesaurus_definition_citation is an annotation property that is drawn from NCI_Thesaurus</efo:NCI_Thesaurus_definition_citation>
         <rdfs:subPropertyOf rdf:resource="http://www.ebi.ac.uk/efo/definition_citation"/>
     </owl:AnnotationProperty>
     
@@ -111,7 +124,7 @@
 
     <owl:AnnotationProperty rdf:about="http://www.ebi.ac.uk/efo/alternative_term">
         <obo:IAO_0000115>An alternative label for a given entity such as a commonly used abbreviation or synonym. </obo:IAO_0000115>
-        <rdfs:label>alternative_term</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alternative_term</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -153,6 +166,12 @@
         <skos:example xml:lang="en">Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel).</skos:example>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#changeNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#changeNote"/>
     
 
 
@@ -203,6 +222,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -214,7 +250,7 @@
     <!-- http://purl.obolibrary.org/obo/CDAO_0000194 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CDAO_0000194">
-        <rdfs:label>part_of</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -504,7 +540,7 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.uniprot.org/core/Taxon"/>
         <rdfs:range rdf:resource="http://purl.uniprot.org/core/Rank"/>
-        <rdfs:comment>The rank of a taxon.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The rank of a taxon.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -514,7 +550,7 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
     <owl:ObjectProperty rdf:about="http://purl.uniprot.org/core/replaces">
         <rdfs:domain rdf:resource="http://purl.uniprot.org/core/Taxon"/>
         <rdfs:range rdf:resource="http://purl.uniprot.org/core/Taxon"/>
-        <rdfs:comment>A resource that is replaced by this resource.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A resource that is replaced by this resource.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -580,6 +616,24 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
     
 
 
+    <!-- http://purl.org/genex#hasFDRpvalue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/genex#hasFDRpvalue">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/genex#AbsenceExpression"/>
+                    <rdf:Description rdf:about="http://purl.org/genex#Expression"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label xml:lang="en">has false discovery rate p-value</rdfs:label>
+        <skos:altLabel xml:lang="en">has FDR p-value</skos:altLabel>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.org/genex#hasSex -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/genex#hasSex">
@@ -590,28 +644,34 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
                 <owl:oneOf>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>NA</rdf:first>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</rdf:first>
                         <rdf:rest>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>female</rdf:first>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">any</rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>hermaphrodite</rdf:first>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</rdf:first>
                                         <rdf:rest>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>male</rdf:first>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hermaphrodite</rdf:first>
                                                 <rdf:rest>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>mixed</rdf:first>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</rdf:first>
                                                         <rdf:rest>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first>not annotated</rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mixed</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">not annotated</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
                                                             </rdf:Description>
                                                         </rdf:rest>
                                                     </rdf:Description>
@@ -626,6 +686,8 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-04</terms:modified>
+        <skos:changeNote>Added the following value in the range list: any.</skos:changeNote>
     </owl:DatatypeProperty>
     
 
@@ -636,7 +698,7 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy>http://purl.uniprot.org/core/</rdfs:isDefinedBy>
-        <rdfs:label>common name</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -646,8 +708,8 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
     <owl:DatatypeProperty rdf:about="http://purl.uniprot.org/core/mnemonic">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">A easy to remember identifier for a UniProtKB entry, but it is not a stable identifier and should not be used by programs to identify entries.</rdfs:comment>
-        <rdfs:comment>A rememberable string that can be used to find entries, not a stable identifier!</rdfs:comment>
-        <rdfs:label>Mnemonic</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rememberable string that can be used to find entries, not a stable identifier!</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mnemonic</rdfs:label>
         <rdfs:seeAlso>http://www.uniprot.org/manual/entry_name</rdfs:seeAlso>
     </owl:DatatypeProperty>
     
@@ -659,7 +721,7 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy>http://purl.uniprot.org/core/</rdfs:isDefinedBy>
-        <rdfs:label>scientific name</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scientific name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -725,10 +787,10 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0000000">
         <rdfs:subClassOf rdf:resource="http://purl.org/genex#AnatomicalEntity"/>
-        <obo:IAO_0000115>A part of a multicellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex.  Or, a substance produced by a multicellular organism with granularity above the level of a protein complex.</obo:IAO_0000115>
-        <oboInOwl:id>CARO:0000000</oboInOwl:id>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A part of a multicellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex.  Or, a substance produced by a multicellular organism with granularity above the level of a protein complex.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:0000000</oboInOwl:id>
         <rdfs:comment>Following BFO, material anatomical entities may have immaterial parts (the lumen of your stomach is part of your stomach).  The granularity limit follows the limits set by the Gene Ontology on the granularity limit for GO:cellular_component. Note that substances produced by an organism (sweat, feaces, urine) do not need to be part of an organism to qualify as an anatomical structure.</rdfs:comment>
-        <rdfs:label>anatomical entity</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anatomical entity</rdfs:label>
     </owl:Class>
     
 
@@ -748,7 +810,7 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000140">
         <rdfs:comment xml:lang="en">Basic unit of graphs and trees</rdfs:comment>
-        <rdfs:label>Node</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Node</rdfs:label>
     </owl:Class>
     
 
@@ -765,8 +827,8 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
     <!-- http://purl.obolibrary.org/obo/OBI_0000181 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000181">
-        <obo:IAO_0000115>A population is a group of material entities consisting of individuals which share a particular characteristic such as inhabiting a particular region or area or ability to interbreed.</obo:IAO_0000115>
-        <rdfs:label>population</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A population is a group of material entities consisting of individuals which share a particular characteristic such as inhabiting a particular region or area or ability to interbreed.</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">population</rdfs:label>
     </owl:Class>
     
 
@@ -775,7 +837,7 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000104">
         <owl:equivalentClass rdf:resource="http://purl.org/net/orth#Protein"/>
-        <rdfs:label>polypeptide</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">polypeptide</rdfs:label>
     </owl:Class>
     
 
@@ -784,7 +846,7 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000704">
         <owl:equivalentClass rdf:resource="http://purl.org/net/orth#Gene"/>
-        <rdfs:label>gene</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gene</rdfs:label>
     </owl:Class>
     
 
@@ -1014,8 +1076,8 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
     <!-- http://purl.uniprot.org/core/Rank -->
 
     <owl:Class rdf:about="http://purl.uniprot.org/core/Rank">
-        <rdfs:comment>A rank of a taxon.</rdfs:comment>
-        <rdfs:label>Taxon rank</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rank of a taxon.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taxon rank</rdfs:label>
     </owl:Class>
     
 
@@ -1036,8 +1098,8 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>An element of a taxonomy for classifying life forms.</rdfs:comment>
-        <rdfs:label>Taxon</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An element of a taxonomy for classifying life forms.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taxon</rdfs:label>
         <rdfs:seeAlso>http://www.ncbi.nlm.nih.gov/books/NBK54428/</rdfs:seeAlso>
     </owl:Class>
     
@@ -1056,10 +1118,10 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0000001">
         <owl:disjointWith rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
-        <obo:IAO_0000115>An experimental factor in Array Express which are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This upper level class is really used to give a root class from which applications can rely on and not be tied to upper ontology classses which do change.</obo:IAO_0000115>
-        <efo:alternative_term>ExperimentalFactor</efo:alternative_term>
-        <rdfs:comment>Concept naming convention is lower case natural naming with spaces, when necessary captials should be used, for example disease factor, HIV, breast carcinoma, Ewing&apos;s sarcoma</rdfs:comment>
-        <rdfs:label>experimental factor</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An experimental factor in Array Express which are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This upper level class is really used to give a root class from which applications can rely on and not be tied to upper ontology classses which do change.</obo:IAO_0000115>
+        <efo:alternative_term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ExperimentalFactor</efo:alternative_term>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concept naming convention is lower case natural naming with spaces, when necessary captials should be used, for example disease factor, HIV, breast carcinoma, Ewing&apos;s sarcoma</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">experimental factor</rdfs:label>
     </owl:Class>
     
 
@@ -1068,13 +1130,13 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0000399">
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
-        <obo:IAO_0000115>A developmental stage is spatiotemporal region encompassing some part of the life cycle of an organism, e.g. blastula stage</obo:IAO_0000115>
-        <efo:NCI_Thesaurus_definition_citation>NCIt:C43531</efo:NCI_Thesaurus_definition_citation>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A developmental stage is spatiotemporal region encompassing some part of the life cycle of an organism, e.g. blastula stage</obo:IAO_0000115>
+        <efo:NCI_Thesaurus_definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIt:C43531</efo:NCI_Thesaurus_definition_citation>
         <efo:alternative_term>development stage</efo:alternative_term>
-        <efo:alternative_term>developmental_stage</efo:alternative_term>
+        <efo:alternative_term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developmental_stage</efo:alternative_term>
         <efo:alternative_term>life cycle stage</efo:alternative_term>
         <rdfs:comment>This branch will be replaced by, and if necessary merged with an Uberon import in future.</rdfs:comment>
-        <rdfs:label>developmental stage</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developmental stage</rdfs:label>
     </owl:Class>
     
 
@@ -1084,11 +1146,11 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
     <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0000635">
         <rdfs:subClassOf rdf:resource="http://purl.org/genex#AnatomicalEntity"/>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
-        <obo:IAO_0000112>tissue, organ, system, sperm, blood or body location (arm).</obo:IAO_0000112>
-        <obo:IAO_0000115>The part of organism&apos;s anatomy or substance arising from an organism from which the biomaterial was derived, excludes cells. E.g. tissue, organ, system, sperm, blood or body location (arm).</obo:IAO_0000115>
-        <efo:NCI_Thesaurus_definition_citation>NCIt:C103199</efo:NCI_Thesaurus_definition_citation>
-        <efo:alternative_term>organism_part</efo:alternative_term>
-        <rdfs:label>organism part</rdfs:label>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tissue, organ, system, sperm, blood or body location (arm).</obo:IAO_0000112>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The part of organism&apos;s anatomy or substance arising from an organism from which the biomaterial was derived, excludes cells. E.g. tissue, organ, system, sperm, blood or body location (arm).</obo:IAO_0000115>
+        <efo:NCI_Thesaurus_definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIt:C103199</efo:NCI_Thesaurus_definition_citation>
+        <efo:alternative_term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organism_part</efo:alternative_term>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organism part</rdfs:label>
     </owl:Class>
     
 
@@ -1098,7 +1160,7 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
     <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0005135">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000181"/>
         <obo:IAO_0000115>A population of organisms that is geneticaly different from others of the same species and possessing a set of defined characteristics.</obo:IAO_0000115>
-        <efo:NCI_Thesaurus_definition_citation>NCIt:C95501</efo:NCI_Thesaurus_definition_citation>
+        <efo:NCI_Thesaurus_definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIt:C95501</efo:NCI_Thesaurus_definition_citation>
         <rdfs:label xml:lang="en">strain</rdfs:label>
     </owl:Class>
     
@@ -1114,11 +1176,11 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
 
     <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity">
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0000001"/>
-        <obo:IAO_0000112>A heart, a human, a fly, a microarray.</obo:IAO_0000112>
-        <obo:IAO_0000115>A material entity is an entity that exists in full during the length of time of its existence, persists through this time while maintaining its identity and has no temporal parts. For example a heart, a human, a fly, a microarray.</obo:IAO_0000115>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A heart, a human, a fly, a microarray.</obo:IAO_0000112>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A material entity is an entity that exists in full during the length of time of its existence, persists through this time while maintaining its identity and has no temporal parts. For example a heart, a human, a fly, a microarray.</obo:IAO_0000115>
         <efo:alternative_term>material type</efo:alternative_term>
-        <efo:source_definition>An independent continuant [snap:IndependentContinuant] that is spatially extended whose identity is independent of that of other entities and can be maintained through time. Note: Material entity [snap:MaterialEntity] subsumes object [snap:Object], fiat object part [snap:FiatObjectPart], and object aggregate [snap:ObjectAggregate], which assume a three level theory of granularity, which is inadequate for some domains, such as biology.</efo:source_definition>
-        <rdfs:label>material entity</rdfs:label>
+        <efo:source_definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An independent continuant [snap:IndependentContinuant] that is spatially extended whose identity is independent of that of other entities and can be maintained through time. Note: Material entity [snap:MaterialEntity] subsumes object [snap:Object], fiat object part [snap:FiatObjectPart], and object aggregate [snap:ObjectAggregate], which assume a three level theory of granularity, which is inadequate for some domains, such as biology.</efo:source_definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">material entity</rdfs:label>
     </owl:Class>
     
 
@@ -1127,9 +1189,9 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
 
     <owl:Class rdf:about="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity">
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0000001"/>
-        <obo:IAO_0000115>A process is an entity that exists in time by occurring or happening, has temporal parts and always involves and depends on some entity during the time it occurs.</obo:IAO_0000115>
-        <efo:NCI_Thesaurus_definition_citation>NCIt:C29862</efo:NCI_Thesaurus_definition_citation>
-        <rdfs:label>process</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process is an entity that exists in time by occurring or happening, has temporal parts and always involves and depends on some entity during the time it occurs.</obo:IAO_0000115>
+        <efo:NCI_Thesaurus_definition_citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIt:C29862</efo:NCI_Thesaurus_definition_citation>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">process</rdfs:label>
     </owl:Class>
     
 
@@ -1148,10 +1210,10 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
     <!-- http://purl.obolibrary.org/obo/CIO_0000029 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CIO_0000029">
-        <obo:IAO_0000115>A confidence level representing a high trust in an evidence.</obo:IAO_0000115>
-        <oboInOwl:id>CIO:0000029</oboInOwl:id>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A confidence level representing a high trust in an evidence.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIO:0000029</oboInOwl:id>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/cio.owl</rdfs:isDefinedBy>
-        <rdfs:label>high confidence level</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high confidence level</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1159,10 +1221,10 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
     <!-- http://purl.obolibrary.org/obo/CIO_0000030 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CIO_0000030">
-        <obo:IAO_0000115>A confidence level representing a moderate trust in an evidence.</obo:IAO_0000115>
-        <oboInOwl:id>CIO:0000030</oboInOwl:id>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A confidence level representing a moderate trust in an evidence.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIO:0000030</oboInOwl:id>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/cio.owl</rdfs:isDefinedBy>
-        <rdfs:label>medium confidence level</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium confidence level</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1170,10 +1232,10 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
     <!-- http://purl.obolibrary.org/obo/CIO_0000031 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/CIO_0000031">
-        <obo:IAO_0000115>A confidence level representing an absence of trust in an evidence.</obo:IAO_0000115>
-        <oboInOwl:id>CIO:0000031</oboInOwl:id>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A confidence level representing an absence of trust in an evidence.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIO:0000031</oboInOwl:id>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/cio.owl</rdfs:isDefinedBy>
-        <rdfs:label>low confidence level</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low confidence level</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1235,7 +1297,7 @@ These rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule
 
     <owl:NamedIndividual rdf:about="http://purl.uniprot.org/core/Species">
         <rdf:type rdf:resource="http://purl.uniprot.org/core/Rank"/>
-        <rdfs:label>Taxonomic rank Species</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taxonomic rank Species</rdfs:label>
     </owl:NamedIndividual>
     
 

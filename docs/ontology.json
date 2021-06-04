@@ -12,6 +12,27 @@
   "@id" : "_:genid100",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl#e"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl#cond"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://purl.org/genex#hasExpressionCondition"
+  } ]
+}, {
+  "@id" : "_:genid102",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl#e"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://purl.org/genex#AbsenceExpression"
+  } ]
+}, {
+  "@id" : "_:genid104",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#seq"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
@@ -21,24 +42,24 @@
     "@id" : "http://purl.org/genex#isAbsentIn"
   } ]
 }, {
-  "@id" : "_:genid101",
+  "@id" : "_:genid105",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
+      "@id" : "_:genid111"
+    }, {
+      "@id" : "_:genid109"
+    }, {
       "@id" : "_:genid107"
-    }, {
-      "@id" : "_:genid105"
-    }, {
-      "@id" : "_:genid103"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid109"
+      "@id" : "_:genid113"
     } ]
   } ]
 }, {
-  "@id" : "_:genid103",
+  "@id" : "_:genid107",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -50,7 +71,7 @@
     "@id" : "http://purl.org/genex#hasSequenceUnit"
   } ]
 }, {
-  "@id" : "_:genid105",
+  "@id" : "_:genid109",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -62,7 +83,7 @@
     "@id" : "http://purl.org/genex#hasExpressionCondition"
   } ]
 }, {
-  "@id" : "_:genid107",
+  "@id" : "_:genid111",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -71,7 +92,7 @@
     "@id" : "http://purl.org/genex#AbsenceExpression"
   } ]
 }, {
-  "@id" : "_:genid109",
+  "@id" : "_:genid113",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#seq"
@@ -83,26 +104,26 @@
     "@id" : "http://purl.org/genex#isAbsentIn"
   } ]
 }, {
-  "@id" : "_:genid110",
+  "@id" : "_:genid114",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
+      "@id" : "_:genid122"
+    }, {
+      "@id" : "_:genid120"
+    }, {
       "@id" : "_:genid118"
     }, {
       "@id" : "_:genid116"
-    }, {
-      "@id" : "_:genid114"
-    }, {
-      "@id" : "_:genid112"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid120"
+      "@id" : "_:genid124"
     } ]
   } ]
 }, {
-  "@id" : "_:genid112",
+  "@id" : "_:genid116",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -114,7 +135,7 @@
     "@id" : "http://purl.org/genex#hasSequenceUnit"
   } ]
 }, {
-  "@id" : "_:genid114",
+  "@id" : "_:genid118",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#cond"
@@ -126,7 +147,7 @@
     "@id" : "http://purl.org/genex#hasStrain"
   } ]
 }, {
-  "@id" : "_:genid116",
+  "@id" : "_:genid120",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -138,7 +159,7 @@
     "@id" : "http://purl.org/genex#hasExpressionCondition"
   } ]
 }, {
-  "@id" : "_:genid118",
+  "@id" : "_:genid122",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -147,7 +168,7 @@
     "@id" : "http://purl.org/genex#AbsenceExpression"
   } ]
 }, {
-  "@id" : "_:genid120",
+  "@id" : "_:genid124",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#seq"
@@ -159,26 +180,26 @@
     "@id" : "http://purl.org/genex#isAbsentIn"
   } ]
 }, {
-  "@id" : "_:genid121",
+  "@id" : "_:genid125",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
+      "@id" : "_:genid133"
+    }, {
+      "@id" : "_:genid131"
+    }, {
       "@id" : "_:genid129"
     }, {
       "@id" : "_:genid127"
-    }, {
-      "@id" : "_:genid125"
-    }, {
-      "@id" : "_:genid123"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid131"
+      "@id" : "_:genid135"
     } ]
   } ]
 }, {
-  "@id" : "_:genid123",
+  "@id" : "_:genid127",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -190,7 +211,7 @@
     "@id" : "http://purl.org/genex#hasSequenceUnit"
   } ]
 }, {
-  "@id" : "_:genid125",
+  "@id" : "_:genid129",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#cond"
@@ -202,7 +223,7 @@
     "@id" : "http://purl.org/genex#hasAnatomicalEntity"
   } ]
 }, {
-  "@id" : "_:genid127",
+  "@id" : "_:genid131",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -214,7 +235,7 @@
     "@id" : "http://purl.org/genex#hasExpressionCondition"
   } ]
 }, {
-  "@id" : "_:genid129",
+  "@id" : "_:genid133",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -223,7 +244,7 @@
     "@id" : "http://purl.org/genex#Expression"
   } ]
 }, {
-  "@id" : "_:genid131",
+  "@id" : "_:genid135",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#seq"
@@ -235,26 +256,26 @@
     "@id" : "http://purl.org/genex#isExpressedIn"
   } ]
 }, {
-  "@id" : "_:genid132",
+  "@id" : "_:genid136",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
+      "@id" : "_:genid144"
+    }, {
+      "@id" : "_:genid142"
+    }, {
       "@id" : "_:genid140"
     }, {
       "@id" : "_:genid138"
-    }, {
-      "@id" : "_:genid136"
-    }, {
-      "@id" : "_:genid134"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid142"
+      "@id" : "_:genid146"
     } ]
   } ]
 }, {
-  "@id" : "_:genid134",
+  "@id" : "_:genid138",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -266,7 +287,7 @@
     "@id" : "http://purl.org/genex#hasSequenceUnit"
   } ]
 }, {
-  "@id" : "_:genid136",
+  "@id" : "_:genid140",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#cond"
@@ -278,7 +299,7 @@
     "@id" : "http://purl.org/genex#hasDevelopmentalStage"
   } ]
 }, {
-  "@id" : "_:genid138",
+  "@id" : "_:genid142",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -290,7 +311,7 @@
     "@id" : "http://purl.org/genex#hasExpressionCondition"
   } ]
 }, {
-  "@id" : "_:genid140",
+  "@id" : "_:genid144",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -299,7 +320,7 @@
     "@id" : "http://purl.org/genex#Expression"
   } ]
 }, {
-  "@id" : "_:genid142",
+  "@id" : "_:genid146",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#seq"
@@ -311,24 +332,24 @@
     "@id" : "http://purl.org/genex#isExpressedIn"
   } ]
 }, {
-  "@id" : "_:genid143",
+  "@id" : "_:genid147",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
+      "@id" : "_:genid153"
+    }, {
+      "@id" : "_:genid151"
+    }, {
       "@id" : "_:genid149"
-    }, {
-      "@id" : "_:genid147"
-    }, {
-      "@id" : "_:genid145"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid151"
+      "@id" : "_:genid155"
     } ]
   } ]
 }, {
-  "@id" : "_:genid145",
+  "@id" : "_:genid149",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -338,27 +359,6 @@
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "http://purl.org/genex#hasSequenceUnit"
-  } ]
-}, {
-  "@id" : "_:genid147",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl#e"
-  } ],
-  "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "urn:swrl#cond"
-  } ],
-  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://purl.org/genex#hasExpressionCondition"
-  } ]
-}, {
-  "@id" : "_:genid149",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl#e"
-  } ],
-  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://purl.org/genex#Expression"
   } ]
 }, {
   "@id" : "_:genid15",
@@ -374,6 +374,27 @@
   "@id" : "_:genid151",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl#e"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl#cond"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://purl.org/genex#hasExpressionCondition"
+  } ]
+}, {
+  "@id" : "_:genid153",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl#e"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://purl.org/genex#Expression"
+  } ]
+}, {
+  "@id" : "_:genid155",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#seq"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
@@ -383,26 +404,26 @@
     "@id" : "http://purl.org/genex#isExpressedIn"
   } ]
 }, {
-  "@id" : "_:genid152",
+  "@id" : "_:genid156",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
+      "@id" : "_:genid164"
+    }, {
+      "@id" : "_:genid162"
+    }, {
       "@id" : "_:genid160"
     }, {
       "@id" : "_:genid158"
-    }, {
-      "@id" : "_:genid156"
-    }, {
-      "@id" : "_:genid154"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid162"
+      "@id" : "_:genid166"
     } ]
   } ]
 }, {
-  "@id" : "_:genid154",
+  "@id" : "_:genid158",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -414,7 +435,7 @@
     "@id" : "http://purl.org/genex#hasSequenceUnit"
   } ]
 }, {
-  "@id" : "_:genid156",
+  "@id" : "_:genid160",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#cond"
@@ -426,7 +447,7 @@
     "@id" : "http://purl.org/genex#hasStrain"
   } ]
 }, {
-  "@id" : "_:genid158",
+  "@id" : "_:genid162",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -438,7 +459,7 @@
     "@id" : "http://purl.org/genex#hasExpressionCondition"
   } ]
 }, {
-  "@id" : "_:genid160",
+  "@id" : "_:genid164",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -447,7 +468,7 @@
     "@id" : "http://purl.org/genex#Expression"
   } ]
 }, {
-  "@id" : "_:genid162",
+  "@id" : "_:genid166",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#seq"
@@ -508,10 +529,22 @@
   } ]
 }, {
   "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.org/genex#AbsenceExpression"
+    }, {
+      "@id" : "http://purl.org/genex#Expression"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
       "@value" : "NA"
+    }, {
+      "@value" : "any"
     }, {
       "@value" : "female"
     }, {
@@ -537,60 +570,60 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid45"
+      "@id" : "_:genid49"
     }, {
-      "@id" : "_:genid43"
+      "@id" : "_:genid47"
     } ]
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/genex#hasSequenceUnit"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://purl.org/net/orth#SequenceUnit"
-  } ]
-}, {
-  "@id" : "_:genid45",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/genex#hasExpressionCondition"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.org/genex#ExpressionCondition"
-  } ]
-}, {
-  "@id" : "_:genid46",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#complementOf" : [ {
-    "@id" : "http://purl.org/genex#Expression"
-  } ]
-}, {
-  "@id" : "_:genid47",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid51"
-    }, {
-      "@id" : "_:genid49"
-    } ]
   } ]
 }, {
   "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/genex#hasExpressionCondition"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.org/genex#ExpressionCondition"
+  } ]
+}, {
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#complementOf" : [ {
+    "@id" : "http://purl.org/genex#Expression"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid55"
+    }, {
+      "@id" : "_:genid53"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/genex#hasSequenceUnit"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://purl.org/net/orth#SequenceUnit"
   } ]
 }, {
-  "@id" : "_:genid51",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/genex#hasExpressionCondition"
@@ -599,16 +632,16 @@
     "@id" : "http://purl.org/genex#ExpressionCondition"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid53"
+    "@id" : "_:genid57"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/genex#hasExpressionCharacteristic"
   } ]
 }, {
-  "@id" : "_:genid53",
+  "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -626,7 +659,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid60",
+  "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
@@ -635,21 +668,21 @@
     "@id" : "http://purl.org/genex#hasExpressionLevel"
   } ]
 }, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid65",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "_:genid73"
+    }, {
+      "@id" : "_:genid71"
+    }, {
       "@id" : "_:genid69"
     }, {
       "@id" : "_:genid67"
-    }, {
-      "@id" : "_:genid65"
-    }, {
-      "@id" : "_:genid63"
     } ]
   } ]
 }, {
-  "@id" : "_:genid63",
+  "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/genex#hasSex"
@@ -658,7 +691,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/genex#hasStrain"
@@ -667,7 +700,7 @@
     "@id" : "http://www.ebi.ac.uk/efo/EFO_0005135"
   } ]
 }, {
-  "@id" : "_:genid67",
+  "@id" : "_:genid71",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/genex#hasDevelopmentalStage"
@@ -676,7 +709,7 @@
     "@id" : "http://www.ebi.ac.uk/efo/EFO_0000399"
   } ]
 }, {
-  "@id" : "_:genid69",
+  "@id" : "_:genid73",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/genex#hasAnatomicalEntity"
@@ -685,53 +718,26 @@
     "@id" : "http://purl.org/genex#AnatomicalEntity"
   } ]
 }, {
-  "@id" : "_:genid70",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://purl.uniprot.org/core/Taxon"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/RO_0002162"
-  } ]
-}, {
-  "@id" : "_:genid71",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/orth#organism"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.org/net/orth#Organism"
-  } ]
-}, {
-  "@id" : "_:genid72",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://semanticscience.org/resource/SIO_000750"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/RO_0001018"
-  } ]
-}, {
-  "@id" : "_:genid73",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/RO_0002162"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.uniprot.org/core/Taxon"
-  } ]
-}, {
   "@id" : "_:genid74",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/orth#organism"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://purl.uniprot.org/core/Taxon"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.org/net/orth#Organism"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/RO_0002162"
   } ]
 }, {
   "@id" : "_:genid75",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/net/orth#organism"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.org/net/orth#Organism"
+  } ]
+}, {
+  "@id" : "_:genid76",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://semanticscience.org/resource/SIO_000750"
   } ],
@@ -739,54 +745,31 @@
     "@id" : "http://purl.obolibrary.org/obo/RO_0001018"
   } ]
 }, {
-  "@id" : "_:genid76",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/CDAO_0000194"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.org/net/orth#Gene"
-  } ]
-}, {
   "@id" : "_:genid77",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://purl.uniprot.org/core/Taxon"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.uniprot.org/core/replaces"
+    "@id" : "http://purl.obolibrary.org/obo/RO_0002162"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.uniprot.org/core/Taxon"
   } ]
 }, {
   "@id" : "_:genid78",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.uniprot.org/core/mnemonic"
+    "@id" : "http://purl.org/net/orth#organism"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.org/net/orth#Organism"
   } ]
 }, {
   "@id" : "_:genid79",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
-  "http://www.w3.org/2003/11/swrl#body" : [ {
-    "@list" : [ {
-      "@id" : "_:genid87"
-    }, {
-      "@id" : "_:genid85"
-    }, {
-      "@id" : "_:genid83"
-    }, {
-      "@id" : "_:genid81"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://semanticscience.org/resource/SIO_000750"
   } ],
-  "http://www.w3.org/2003/11/swrl#head" : [ {
-    "@list" : [ {
-      "@id" : "_:genid89"
-    } ]
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/RO_0001018"
   } ]
 }, {
   "@id" : "_:genid8",
@@ -807,7 +790,57 @@
     } ]
   } ]
 }, {
+  "@id" : "_:genid80",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CDAO_0000194"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.org/net/orth#Gene"
+  } ]
+}, {
   "@id" : "_:genid81",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://purl.uniprot.org/core/Taxon"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.uniprot.org/core/replaces"
+  } ]
+}, {
+  "@id" : "_:genid82",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.uniprot.org/core/mnemonic"
+  } ]
+}, {
+  "@id" : "_:genid83",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid91"
+    }, {
+      "@id" : "_:genid89"
+    }, {
+      "@id" : "_:genid87"
+    }, {
+      "@id" : "_:genid85"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid93"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid85",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -819,7 +852,7 @@
     "@id" : "http://purl.org/genex#hasSequenceUnit"
   } ]
 }, {
-  "@id" : "_:genid83",
+  "@id" : "_:genid87",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#cond"
@@ -831,7 +864,7 @@
     "@id" : "http://purl.org/genex#hasAnatomicalEntity"
   } ]
 }, {
-  "@id" : "_:genid85",
+  "@id" : "_:genid89",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -843,7 +876,7 @@
     "@id" : "http://purl.org/genex#hasExpressionCondition"
   } ]
 }, {
-  "@id" : "_:genid87",
+  "@id" : "_:genid91",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -852,7 +885,7 @@
     "@id" : "http://purl.org/genex#AbsenceExpression"
   } ]
 }, {
-  "@id" : "_:genid89",
+  "@id" : "_:genid93",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#seq"
@@ -864,26 +897,26 @@
     "@id" : "http://purl.org/genex#isAbsentIn"
   } ]
 }, {
-  "@id" : "_:genid90",
+  "@id" : "_:genid94",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
+      "@id" : "_:genid102"
+    }, {
+      "@id" : "_:genid100"
+    }, {
       "@id" : "_:genid98"
     }, {
       "@id" : "_:genid96"
-    }, {
-      "@id" : "_:genid94"
-    }, {
-      "@id" : "_:genid92"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid100"
+      "@id" : "_:genid104"
     } ]
   } ]
 }, {
-  "@id" : "_:genid92",
+  "@id" : "_:genid96",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -895,7 +928,7 @@
     "@id" : "http://purl.org/genex#hasSequenceUnit"
   } ]
 }, {
-  "@id" : "_:genid94",
+  "@id" : "_:genid98",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#cond"
@@ -905,27 +938,6 @@
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "http://purl.org/genex#hasDevelopmentalStage"
-  } ]
-}, {
-  "@id" : "_:genid96",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl#e"
-  } ],
-  "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "urn:swrl#cond"
-  } ],
-  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://purl.org/genex#hasExpressionCondition"
-  } ]
-}, {
-  "@id" : "_:genid98",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl#e"
-  } ],
-  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://purl.org/genex#AbsenceExpression"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/BFO_0000001",
@@ -1410,14 +1422,21 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/genex",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2021-06-04"
+  } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
     "@id" : "http://purl.org/lscr"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Gene expression (GenEx) ontology 0.1 version. Author: Tarcisio Mendes de Farias (tarcisio.mendesdefarias@unil.ch). Contributors: Frédéric Bastian, Julien Wollbrett, Christophe Dessimoz and Marc Robinson-Rechavi."
+    "@value" : "Gene expression (GenEx) ontology 0.2 version. Author: Tarcisio Mendes de Farias (tarcisio.mendesdefarias@unil.ch). Contributors: Frédéric Bastian, Julien Wollbrett, Christophe Dessimoz and Marc Robinson-Rechavi."
   } ]
 }, {
   "@id" : "http://purl.org/genex#AVERAGE_EXPRESSED",
@@ -1434,9 +1453,9 @@
     "@value" : "absence of gene expression"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid41"
+    "@id" : "_:genid45"
   }, {
-    "@id" : "_:genid46"
+    "@id" : "_:genid50"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -1470,11 +1489,11 @@
     "@value" : "gene expression"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid47"
+    "@id" : "_:genid51"
   }, {
-    "@id" : "_:genid52"
+    "@id" : "_:genid56"
   }, {
-    "@id" : "_:genid60"
+    "@id" : "_:genid64"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -1495,10 +1514,10 @@
     "@value" : "gene expression experiment condition"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid70"
+    "@id" : "_:genid74"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid61"
+    "@id" : "_:genid65"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -1649,6 +1668,23 @@
     "@value" : "expression score"
   } ]
 }, {
+  "@id" : "http://purl.org/genex#hasFDRpvalue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid34"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has false discovery rate p-value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "has FDR p-value"
+  } ]
+}, {
   "@id" : "http://purl.org/genex#hasSequenceUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1664,11 +1700,18 @@
 }, {
   "@id" : "http://purl.org/genex#hasSex",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2021-06-04"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/genex#ExpressionCondition"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid34"
+    "@id" : "_:genid37"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
+    "@value" : "Added the following value in the range list: any."
   } ]
 }, {
   "@id" : "http://purl.org/genex#hasStrain",
@@ -1743,9 +1786,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/net/orth#SequenceUnit"
   }, {
-    "@id" : "_:genid71"
+    "@id" : "_:genid75"
   }, {
-    "@id" : "_:genid72"
+    "@id" : "_:genid76"
   } ]
 }, {
   "@id" : "http://purl.org/net/orth#GeneTreeNode",
@@ -1773,7 +1816,7 @@
     "@value" : "Organism"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid73"
+    "@id" : "_:genid77"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -1789,9 +1832,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/net/orth#SequenceUnit"
   }, {
-    "@id" : "_:genid74"
+    "@id" : "_:genid78"
   }, {
-    "@id" : "_:genid75"
+    "@id" : "_:genid79"
   } ]
 }, {
   "@id" : "http://purl.org/net/orth#SequenceUnit",
@@ -1827,7 +1870,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/net/orth#SequenceUnit"
   }, {
-    "@id" : "_:genid76"
+    "@id" : "_:genid80"
   } ]
 }, {
   "@id" : "http://purl.org/net/orth#inDatabase",
@@ -1880,9 +1923,9 @@
     "@value" : "http://www.ncbi.nlm.nih.gov/books/NBK54428/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid77"
+    "@id" : "_:genid81"
   }, {
-    "@id" : "_:genid78"
+    "@id" : "_:genid82"
   } ]
 }, {
   "@id" : "http://purl.uniprot.org/core/commonName",
@@ -2126,6 +2169,9 @@
     "@id" : "http://www.ebi.ac.uk/efo/EFO_0000001"
   } ]
 }, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
   "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2153,6 +2199,9 @@
     "@language" : "en",
     "@value" : "Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel)."
   } ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#changeNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#definition",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
