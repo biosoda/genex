@@ -1,6 +1,6 @@
 # The GenEx semantic model
 
-The GenEx documentation is available at [https://purl.org/genex/documentation]([https://biosoda.github.io/genex/](https://purl.org/genex/documentation)).
+The GenEx documentation is available at [https://purl.org/genex/documentation](https://purl.org/genex/documentation).
 
 [genex_v0_2.owl](genex_v0_2.owl) file only includes concepts and relations from the imported ontologies (e.g.: RO, CARO, EFO, UniProt core ontologies) that are relevants to represent gene expression information. 
  
