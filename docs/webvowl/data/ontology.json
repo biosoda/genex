@@ -75,12 +75,12 @@
       }, {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/ro.owl",
+        "value" : "https://schema.org",
         "type" : "iri"
       }, {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "https://schema.org",
+        "value" : "http://purl.obolibrary.org/obo/ro.owl",
         "type" : "iri"
       } ],
       "license" : [ {
@@ -92,7 +92,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "https://orcid.org/0000-0002-3437-3329",
+        "value" : "https://orcid.org/0000-0002-2170-853X",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-3175-5372",
         "type" : "iri"
       }, {
         "identifier" : "contributor",
@@ -102,17 +107,12 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "https://orcid.org/0000-0002-2170-853X",
-        "type" : "iri"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
         "value" : "https://orcid.org/0000-0002-9415-5104",
         "type" : "iri"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "https://orcid.org/0000-0002-3175-5372",
+        "value" : "https://orcid.org/0000-0002-3437-3329",
         "type" : "iri"
       } ],
       "extends" : [ {
@@ -127,23 +127,17 @@
         "value" : "genex",
         "type" : "label"
       } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2024-04-30",
+        "type" : "label"
+      } ],
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "undefined",
         "value" : "https://www.sib.swiss",
         "type" : "iri"
-      } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2021-06-04",
-        "type" : "label"
-      } ],
-      "bibliographicCitation" : [ {
-        "identifier" : "bibliographicCitation",
-        "language" : "undefined",
-        "value" : "Ana Claudia Sima, Tarcisio Mendes de Farias, Erich Zbinden, Maria Anisimova, Manuel Gil, Heinz Stockinger, Kurt Stockinger, Marc Robinson-Rechavi, Christophe Dessimoz, Enabling semantic queries across federated bioinformatics databases, Database, Volume 2019, 2019, baz106, https://doi.org/10.1093/database/baz106",
-        "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
@@ -157,10 +151,16 @@
         "value" : "https://github.com/biosoda/genex",
         "type" : "label"
       } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "undefined",
+        "value" : "Ana Claudia Sima, Tarcisio Mendes de Farias, Erich Zbinden, Maria Anisimova, Manuel Gil, Heinz Stockinger, Kurt Stockinger, Marc Robinson-Rechavi, Christophe Dessimoz, Enabling semantic queries across federated bioinformatics databases, Database, Volume 2019, 2019, baz106, [https://doi.org/10.1093/database/baz106](https://doi.org/10.1093/database/baz106)",
+        "type" : "label"
+      } ],
       "introduction" : [ {
         "identifier" : "introduction",
         "language" : "undefined",
-        "value" : "There is a general lack of a comprehensive ontology to serve as a data schema for describing knowledge in the field of gene expression. This may seem surprising, considering the ubiquity of gene expression analyses in molecular biology and the existence of multiple well-established resources for gene expression, such as Bgee, Expression Atlas (EA), GENEVESTIGATOR, RefEx (Reference Expression dataset) or the Tissue Expression database. We note here that different gene expression databases often use distinct criteria to assert expressed in or absent in relations.\n\nTo the best of our knowledge, at least 3 semantic models currently exist as initial attempts to structure gene expression related data: the Relation Ontology (RO), the Expression Atlas semantic model (discontinued) and Bioschema.org / Schema.org. The Relation Ontology and Schema.org define only a few terms within the domain of gene expression and is not uniquely designed for this knowledge domain. Notably, they contain an  'expressed in' relation. The Expression Atlas defines a semantic model related to gene expression that mainly focuses on modelling the Expression Atlas data itself and not the domain of gene expression generally. In this EA model, additional data interpretations (i.e., semantics) are not explicitly represented, such as a given gene is expressed or lowly expressed in some sample relative to others. Although it would be possible to obtain this information through a more complex query on the Expression Atlas SPARQL endpoint (currently discontinued), we lack an explicit representation, which would allow us to compare gene expression data from these different databases.\n\nTo provide a first step toward a general-purpose gene expression ontology, we defined a semantic model called GenEx. GenEx is aligned with the Relation Ontology and Expression Atlas models to facilitate interoperability with existing RDF stores. Furthermore, we reuse parts of the data schemas of the ORTH and UniProtKB core ontologies to provide an easy way to interoperate with other biological databases from different knowledge domains that are relevant to the gene expression domain. For example, integrating orthology and gene expression data are relevant since we might want to predict gene expression conservation for orthologous genes.\n\nThe GenEx semantic model is designed to capture and structure gene expression information at a higher level relative to others.\nBy doing so, we intend to model the data meanings which are expected by the end-users such as biologists. For example, often biologists are not interested in knowing expression scores, that depend on the method used; the data transformations; or the methods used. Rather, for instance, they might look for an interpretation of expression scores, such as whether a gene is highly expressed. \nThis semantic model was defined by using the [OWL 2 Description Logics (DL)](https://www.w3.org/TR/owl2-overview/).\nThe methodology to develop GenEx was inspired by the Simplified Agile Methodology for Ontology Development [SAMOD](http://essepuntato.github.io/samod/).  \n         \nWe defined a concept for describing absence of gene expression so-called  [genex:AbsenceExpression](#AbsenceExpression). The  [genex:AbsenceExpression](#AbsenceExpression) class is a subclass of  the complement of [genex:Expression](#Expression) class (i.e.,  [genex:AbsenceExpression](#AbsenceExpression) ⊑ ¬ [genex:Expression](#Expression).  [genex:Expression](#Expression) is the concept for representing gene expression according to a given experimental condition (e.g. sex and anatomical entity). [genex:AbsenceExpression](#AbsenceExpression) is not equivalent to the negation of the  [genex:Expression](#Expression) because it may lack experiments to conclude that a gene is expressed (i.e. missing gene expression information). Therefore, solely data processed from experiments which confirm no presence of expression are described by using the  [genex:AbsenceExpression](#AbsenceExpression) class. We highlight that the [Bgee database](https://bgee.org) provides absence of expression, Bastian et al. in [(1)](#bastian2021) describe how the absence of expression information is computed in the Bgee database by also discussing about expression calls.  \n\nWe mostly considered to reuse the following ontologies:\n\n- The [Relation Ontology (RO)](http://www.obofoundry.org/ontology/ro.html). For example, we reuse ro:RO_0002245 OWL object property labelled as “over-expressed in” or “highly expressed”. In DL, we can formalise as follows: ∃[ro:RO_0002245](#http://purl.obolibrary.org/obo/RO_0002245).⊤ ⊑ [orth:SequenceUnit](#http://purl.org/net/orth#SequenceUnit) where [orth:SequenceUnit](#http://purl.org/net/orth#SequenceUnit) is the inferred domain of  [ro:RO_0002245](#http://purl.obolibrary.org/obo/RO_0002245) and ⊤ is the top concept (i.e., [owl:Thing](https://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_Thing) term).\n- The [Orthology (ORTH) ontology](http://qfo.github.io/OrthologyOntology/). For example, we reuse the [orth:SequenceUnit](#http://purl.org/net/orth#SequenceUnit) class (i.e., [orth:SequenceUnit](#http://purl.org/net/orth#SequenceUnit) ⊑ ⊤). The reuse of terms and a part of the data schema of ORTH ontology significantly facilitate the integration with orthology databases (e.g. OMA). In doing so, we address the use case of predicting presence or absence of expression for orthologous genes.   \n- The [Experimental Factor Ontology (EFO)](https://www.ebi.ac.uk/efo/). This ontology provides a description of various experimental variables (e.g., organism part, material entity and developmental stage) available in EBI databases such as EA. In GenEx, we mainly reuse classes such as [efo:EFO_0000635](#http://www.ebi.ac.uk/efo/EFO_0000635) (labelled “organism part”),    [efo:EFO_0005135](#http://www.ebi.ac.uk/efo/EFO_0005135) (labelled “strain”), and  [efo:EFO_0000399](#http://www.ebi.ac.uk/efo/EFO_0000399) (labelled “developmental stage”). \n- The [Confidence Information Ontology (CIO)](http://www.obofoundry.org/ontology/cio.html) classes as instance values of the [genex:hasConfidenceLevel](#hasConfidenceLevel) OWL object property. In the GenEx context, CIO classes  are individuals to represent the confidence levels of gene expression predictions. This is possible in OWL 2 thanks to [punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) .  The following DL constraint is stated ⊤ ⊑∀[genex:hasConfidenceLevel](#hasConfidenceLevel).{[cio:0000029](#http://purl.obolibrary.org/obo/CIO_0000029), [cio:0000030](#http://purl.obolibrary.org/obo/CIO_0000030), [cio:0000031](#http://purl.obolibrary.org/obo/CIO_0000031)}. This means that the [genex:hasConfidenceLevel](#hasConfidenceLevel) property values (i.e., property range) can only be  “high confidence level”', “medium confidence level”, or “low confidence level”.     \n- The Uber-anatomy (UBERON) ontology. In the GenEx context, UBERON classes  are considered as individuals\nof genex:AnatomicalEntity or [efo:EFO_0000399](#http://www.ebi.ac.uk/efo/EFO_0000399)  (i.e., developmental stage) classes. The classes of the developmental stage per species ontologies in the [wiki](#https://github.com/obophenotype/developmental-stage-ontologies/wiki) developmental-stage-ontologies wiki</a> are also considered as individuals of [efo:EFO_0000399](#http://www.ebi.ac.uk/efo/EFO_0000399)  class. Therefore, for GenEx, these ontologies are controlled vocabularies assigned as values of [genex:hasDevelopmentalStage](#hasDevelopmentalStage) and genex:hasAnatomicalEntity OWL object properties. These properties describe gene expression experimental conditions. In UBERON, despite the “life cycle stage” term is a synonym of “developmental stage” EFO term, we decided to reuse EFO “developmental stage” term in GenEx rather than UBERON one. This is because we want to separate the UBERON terms which are considered as OWL individuals in the GenEx context (by applying [OWL 2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) feature) and the “developmental stage” class from EFO.  \n\nOne of the main semantic modelling issues GenEx addresses is to provide terms and a data schema for explicitly describing and structuring multiple combined conditions for gene expression. For example, the HBB human gene is highly expressed in the cerebellum of 6-12 year-old child stage. Thus, experiments to derive this conclusion were mainly performed under two conditions: a human developmental stage and the cerebellum anatomical entity.\nIn GenEx, we explicitly define a relation for each experimental condition such as the [genex:hasAnatomicalEntity](#hasAnatomicalEntity) property assigned with an [Uber-anatomy (UBERON)](http://uberon.github.io/) class as value by [punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning). We reuse [Experimental Factor Ontology (EFO)](https://www.ebi.ac.uk/efo/) classes instead of  defining literals. \n\nAs a limitation, at present, GenEx does not support differential expression analysis such as included in the Expression Atlas RDF schema (that is discontinued). This is because we mostly focus on describing information that may be extracted from the present state of the Bgee database. GenEx can be viewed as a start point towards an ontology to structure gene expression information. We consider GenEx a semantic model rather than an ontology. This is because, currently, it is not necessarily a shared conceptualisation among all stakeholders of interest, which include but not only the following gene expression database teams Bgee, Expression Atlas, GENEVESTIGATOR, and Tissue, and others (e.g., the Model Organisms Databases).  \n",
+        "value" : "There is a general lack of a comprehensive ontology to serve as a data schema for describing knowledge in the field of gene expression. This may seem surprising, considering the ubiquity of gene expression analyses in molecular biology and the existence of multiple well-established resources for gene expression, such as Bgee, Expression Atlas (EA), GENEVESTIGATOR, RefEx (Reference Expression dataset) or the Tissue Expression database. We note here that different gene expression databases often use distinct criteria to assert expressed in or absent in relations.\n\nTo the best of our knowledge, at least 3 semantic models currently exist as initial attempts to structure gene expression related data: the Relation Ontology (RO), the Expression Atlas semantic model (discontinued) and Bioschema.org / Schema.org. The Relation Ontology and Schema.org define only a few terms within the domain of gene expression and is not uniquely designed for this knowledge domain. Notably, they contain an  'expressed in' relation. The Expression Atlas defines a semantic model related to gene expression that mainly focuses on modelling the Expression Atlas data itself and not the domain of gene expression generally. In this EA model, additional data interpretations (i.e., semantics) are not explicitly represented, such as a given gene is expressed or lowly expressed in some sample relative to others. Although it would be possible to obtain this information through a more complex query on the Expression Atlas SPARQL endpoint (currently discontinued), we lack an explicit representation, which would allow us to compare gene expression data from these different databases.\n\nTo provide a first step toward a general-purpose gene expression ontology, we defined a semantic model called GenEx. GenEx is aligned with the Relation Ontology and Expression Atlas models to facilitate interoperability with existing RDF stores. Furthermore, we reuse parts of the data schemas of the ORTH and UniProtKB core ontologies to provide an easy way to interoperate with other biological databases from different knowledge domains that are relevant to the gene expression domain. For example, integrating orthology and gene expression data are relevant since we might want to predict gene expression conservation for orthologous genes.\n\nGenEx is designed to capture and structure gene expression information at a higher level relative to others.\nBy doing so, we intend to model the data meanings which are expected by the end-users such as biologists. For example, often biologists are not interested in knowing expression scores, that depend on the method used or data transformations. Rather, for instance, they might look for an interpretation of expression scores, such as whether a gene is highly expressed. \nGenEx was defined by using the [OWL 2 Description Logics (DL)](https://www.w3.org/TR/owl2-overview/).\nThe methodology to develop GenEx was inspired by the Simplified Agile Methodology for Ontology Development [SAMOD](http://essepuntato.github.io/samod/).  \n         \nWe defined a concept for describing absence of gene expression so-called  [genex:AbsenceExpression](#AbsenceExpression). The  [genex:AbsenceExpression](#AbsenceExpression) class is a subclass of  the complement of [genex:Expression](#Expression) class (i.e.,  [genex:AbsenceExpression](#AbsenceExpression) ⊑ ¬[genex:Expression](#Expression).  [genex:Expression](#Expression) is the concept for representing gene expression according to a given experimental condition (e.g. sex and anatomical entity). [genex:AbsenceExpression](#AbsenceExpression) is not equivalent to the negation of the  [genex:Expression](#Expression) because it may lack experiments to conclude that a gene is expressed (i.e., missing gene expression information). Therefore, solely data processed from experiments which confirm no presence of expression are described by using the  [genex:AbsenceExpression](#AbsenceExpression) class. We highlight that the [Bgee database](https://bgee.org) provides absence of expression, Bastian et al. in [(1)](https://doi.org/10.1093/nar/gkaa793) describe how the absence of expression information is computed in the Bgee database by also discussing about expression calls.  \n\nWe mostly considered to reuse the following ontologies:\n\n- The [Relation Ontology (RO)](http://www.obofoundry.org/ontology/ro.html). For example, we reuse ro:RO_0002245 OWL object property labelled as “over-expressed in” or “highly expressed”. In DL, we can formalise as follows: ∃[ro:RO_0002245](#http://purl.obolibrary.org/obo/RO_0002245).⊤ ⊑ [orth:SequenceUnit](#http://purl.org/net/orth#SequenceUnit) where [orth:SequenceUnit](#http://purl.org/net/orth#SequenceUnit) is the inferred domain of  [ro:RO_0002245](#http://purl.obolibrary.org/obo/RO_0002245) and ⊤ is the top concept (i.e., [owl:Thing](https://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_Thing) term).\n- The [Orthology (ORTH) ontology](http://qfo.github.io/OrthologyOntology/). For example, we reuse the [orth:SequenceUnit](#http://purl.org/net/orth#SequenceUnit) class (i.e., [orth:SequenceUnit](#http://purl.org/net/orth#SequenceUnit) ⊑ ⊤). The reuse of terms and a part of the data schema of ORTH ontology significantly facilitate the integration with orthology databases (e.g. OMA). In doing so, we address the use case of predicting presence or absence of expression for orthologous genes.   \n- The [Experimental Factor Ontology (EFO)](https://www.ebi.ac.uk/efo/). This ontology provides a description of various experimental variables (e.g., organism part, material entity and developmental stage) available in EBI databases such as EA. In GenEx, we mainly reuse classes such as [efo:EFO_0000635](#http://www.ebi.ac.uk/efo/EFO_0000635) (labelled “organism part”),    [efo:EFO_0005135](#http://www.ebi.ac.uk/efo/EFO_0005135) (labelled “strain”), and  [efo:EFO_0000399](#http://www.ebi.ac.uk/efo/EFO_0000399) (labelled “developmental stage”). \n- The [Confidence Information Ontology (CIO)](http://www.obofoundry.org/ontology/cio.html) classes as instance values of the [genex:hasConfidenceLevel](#hasConfidenceLevel) OWL object property. In the GenEx context, CIO classes  are individuals to represent the confidence levels of gene expression predictions. This is possible in OWL 2 thanks to [punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) .  The following DL constraint is stated ⊤ ⊑∀[genex:hasConfidenceLevel](#hasConfidenceLevel).{[cio:0000029](#http://purl.obolibrary.org/obo/CIO_0000029), [cio:0000030](#http://purl.obolibrary.org/obo/CIO_0000030), [cio:0000031](#http://purl.obolibrary.org/obo/CIO_0000031)}. This means that the [genex:hasConfidenceLevel](#hasConfidenceLevel) property values (i.e., property range) can only be  “high confidence level”', “medium confidence level”, or “low confidence level”.     \n- The Uber-anatomy (UBERON) ontology. In the GenEx context, UBERON classes  are considered as individuals\nof genex:AnatomicalEntity or [efo:EFO_0000399](#http://www.ebi.ac.uk/efo/EFO_0000399)  (i.e., developmental stage) classes. The classes of the developmental stage per species ontologies in the [wiki](#https://github.com/obophenotype/developmental-stage-ontologies/wiki) developmental-stage-ontologies wiki</a> are also considered as individuals of [efo:EFO_0000399](#http://www.ebi.ac.uk/efo/EFO_0000399)  class. Therefore, for GenEx, these ontologies are controlled vocabularies assigned as values of [genex:hasDevelopmentalStage](#hasDevelopmentalStage) and genex:hasAnatomicalEntity OWL object properties. These properties describe gene expression experimental conditions. In UBERON, despite the “life cycle stage” term is a synonym of “developmental stage” EFO term, we decided to reuse EFO “developmental stage” term in GenEx rather than UBERON one. This is because we want to separate the UBERON terms which are considered as OWL individuals in the GenEx context (by applying [OWL 2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) feature) and the “developmental stage” class from EFO.  \n\nOne of the main semantic modelling issues GenEx addresses is to provide terms and a data schema for explicitly describing and structuring multiple combined conditions for gene expression. For example, the HBB human gene is highly expressed in the cerebellum of 6-12 year-old child stage. Thus, experiments to derive this conclusion were mainly performed under two conditions: a human developmental stage and the cerebellum anatomical entity.\nIn GenEx, we explicitly define a relation for each experimental condition such as the [genex:hasAnatomicalEntity](#hasAnatomicalEntity) property assigned with an [Uber-anatomy (UBERON)](http://uberon.github.io/) class as value by [punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning). We reuse [Experimental Factor Ontology (EFO)](https://www.ebi.ac.uk/efo/) classes instead of  defining literals. \n\nAs a limitation, at present, GenEx does not support differential expression analysis such as included in the Expression Atlas RDF schema (that is discontinued). This is because we mostly focus on describing information that may be extracted from the present state of the Bgee database. GenEx can be viewed as a start point towards an ontology to structure gene expression information. We consider GenEx a semantic model rather than an ontology. This is because, currently, it is not necessarily a shared conceptualisation among all stakeholders of interest, which include but not only the following gene expression database teams Bgee, Expression Atlas, GENEVESTIGATOR, and Tissue, and others (e.g., the Model Organisms Databases).  \n",
         "type" : "label"
       } ],
       "status" : [ {
@@ -284,13 +284,13 @@
     "id" : "64",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
-    "type" : "owl:equivalentClass"
-  }, {
     "id" : "39",
     "type" : "owl:Class"
   }, {
-    "id" : "72",
+    "id" : "6",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "71",
     "type" : "owl:Class"
   }, {
     "id" : "74",
@@ -314,10 +314,10 @@
     "id" : "5",
     "type" : "owl:Class"
   }, {
-    "id" : "92",
+    "id" : "93",
     "type" : "owl:Class"
   }, {
-    "id" : "71",
+    "id" : "72",
     "type" : "owl:equivalentClass"
   }, {
     "id" : "56",
@@ -371,12 +371,12 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "sequence unit expression",
+        "value" : "expression",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "expression",
+        "value" : "sequence unit expression",
         "type" : "label"
       } ],
       "example" : [ {
@@ -400,7 +400,7 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "Subgene",
-      "en" : "subgene"
+      "en" : "region of a gene"
     },
     "comment" : {
       "en" : "A region of the sequence of the gene"
@@ -489,7 +489,7 @@
   }, {
     "instances" : 0,
     "union" : [ "23", "7" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "22"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#double",
@@ -501,7 +501,7 @@
   }, {
     "instances" : 0,
     "union" : [ "23", "7" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "25"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CARO_0030000",
@@ -537,7 +537,7 @@
   }, {
     "instances" : 0,
     "union" : [ "30", "3", "11", "31" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "29"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
@@ -550,7 +550,7 @@
   }, {
     "instances" : 0,
     "union" : [ "23", "7" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "33"
   }, {
     "instances" : 0,
@@ -627,12 +627,12 @@
   }, {
     "instances" : 0,
     "union" : [ "30", "3", "11", "31" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "35"
   }, {
     "instances" : 0,
     "union" : [ "23", "7" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "37"
   }, {
     "instances" : 0,
@@ -723,7 +723,7 @@
   }, {
     "instances" : 0,
     "union" : [ "23", "7" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "42"
   }, {
     "iri" : "http://www.ifomis.org/bfo/1.1/snap#MaterialEntity",
@@ -774,6 +774,12 @@
         "value" : "http://purl.obolibrary.org/obo/bfo.owl",
         "type" : "iri"
       } ],
+      "IAO_0000600" : [ {
+        "identifier" : "IAO_0000600",
+        "language" : "en",
+        "value" : "A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity. (axiom label in BFO2 Reference: [008-002])",
+        "type" : "label"
+      } ],
       "IAO_0000116" : [ {
         "identifier" : "IAO_0000116",
         "language" : "en",
@@ -783,12 +789,6 @@
         "identifier" : "IAO_0000116",
         "language" : "en",
         "value" : "BFO 2 Reference: Continuant entities are entities which can be sliced to yield parts only along the spatial dimension, yielding for example the parts of your table which we call its legs, its top, its nails. ‘My desk stretches from the window to the door. It has spatial parts, and can be sliced (in space) in two. With respect to time, however, a thing is a continuant.’ [60, p. 240",
-        "type" : "label"
-      } ],
-      "IAO_0000600" : [ {
-        "identifier" : "IAO_0000600",
-        "language" : "en",
-        "value" : "A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity. (axiom label in BFO2 Reference: [008-002])",
         "type" : "label"
       } ]
     },
@@ -814,12 +814,12 @@
       "IAO_0000116" : [ {
         "identifier" : "IAO_0000116",
         "language" : "en",
-        "value" : "BFO 2 Reference: In all areas of empirical inquiry we encounter general terms of two sorts. First are general terms which refer to universals or types:animaltuberculosissurgical procedurediseaseSecond, are general terms used to refer to groups of entities which instantiate a given universal but do not correspond to the extension of any subuniversal of that universal because there is nothing intrinsic to the entities in question by virtue of which they – and only they – are counted as belonging to the given group. Examples are: animal purchased by the Emperortuberculosis diagnosed on a Wednesdaysurgical procedure performed on a patient from Stockholmperson identified as candidate for clinical trial #2056-555person who is signatory of Form 656-PPVpainting by Leonardo da VinciSuch terms, which represent what are called ‘specializations’ in [81",
+        "value" : "Entity doesn't have a closure axiom because the subclasses don't necessarily exhaust all possibilites. For example Werner Ceusters 'portions of reality' include 4 sorts, entities (as BFO construes them), universals, configurations, and relations. It is an open question as to whether entities as construed in BFO will at some point also include these other portions of reality. See, for example, 'How to track absolutely everything' at http://www.referent-tracking.com/_RTU/papers/CeustersICbookRevised.pdf",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000116",
         "language" : "en",
-        "value" : "Entity doesn't have a closure axiom because the subclasses don't necessarily exhaust all possibilites. For example Werner Ceusters 'portions of reality' include 4 sorts, entities (as BFO construes them), universals, configurations, and relations. It is an open question as to whether entities as construed in BFO will at some point also include these other portions of reality. See, for example, 'How to track absolutely everything' at http://www.referent-tracking.com/_RTU/papers/CeustersICbookRevised.pdf",
+        "value" : "BFO 2 Reference: In all areas of empirical inquiry we encounter general terms of two sorts. First are general terms which refer to universals or types:animaltuberculosissurgical procedurediseaseSecond, are general terms used to refer to groups of entities which instantiate a given universal but do not correspond to the extension of any subuniversal of that universal because there is nothing intrinsic to the entities in question by virtue of which they – and only they – are counted as belonging to the given group. Examples are: animal purchased by the Emperortuberculosis diagnosed on a Wednesdaysurgical procedure performed on a patient from Stockholmperson identified as candidate for clinical trial #2056-555person who is signatory of Form 656-PPVpainting by Leonardo da VinciSuch terms, which represent what are called ‘specializations’ in [81",
         "type" : "label"
       } ],
       "IAO_0000600" : [ {
@@ -921,22 +921,37 @@
       "IAO_0000112" : [ {
         "identifier" : "IAO_0000112",
         "language" : "en",
-        "value" : "an atom",
-        "type" : "label"
-      }, {
-        "identifier" : "IAO_0000112",
-        "language" : "en",
-        "value" : "an orchestra.",
-        "type" : "label"
-      }, {
-        "identifier" : "IAO_0000112",
-        "language" : "en",
         "value" : "the interior of your mouth",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000112",
         "language" : "en",
+        "value" : "an organism",
+        "type" : "label"
+      }, {
+        "identifier" : "IAO_0000112",
+        "language" : "en",
+        "value" : "a leg",
+        "type" : "label"
+      }, {
+        "identifier" : "IAO_0000112",
+        "language" : "en",
+        "value" : "a molecule",
+        "type" : "label"
+      }, {
+        "identifier" : "IAO_0000112",
+        "language" : "en",
         "value" : "a spatial region",
+        "type" : "label"
+      }, {
+        "identifier" : "IAO_0000112",
+        "language" : "en",
+        "value" : "a heart",
+        "type" : "label"
+      }, {
+        "identifier" : "IAO_0000112",
+        "language" : "en",
+        "value" : "an orchestra.",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000112",
@@ -951,22 +966,7 @@
       }, {
         "identifier" : "IAO_0000112",
         "language" : "en",
-        "value" : "a leg",
-        "type" : "label"
-      }, {
-        "identifier" : "IAO_0000112",
-        "language" : "en",
-        "value" : "a heart",
-        "type" : "label"
-      }, {
-        "identifier" : "IAO_0000112",
-        "language" : "en",
-        "value" : "an organism",
-        "type" : "label"
-      }, {
-        "identifier" : "IAO_0000112",
-        "language" : "en",
-        "value" : "a molecule",
+        "value" : "an atom",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -1047,7 +1047,7 @@
     },
     "label" : {
       "IRI-based" : "SO_0000704",
-      "undefined" : "gene"
+      "undefined" : "Gene"
     },
     "attributes" : [ "equivalent", "external" ],
     "id" : "48"
@@ -1133,28 +1133,6 @@
     "attributes" : [ "external" ],
     "id" : "64"
   }, {
-    "iri" : "http://purl.org/net/orth#Organism",
-    "equivalent" : [ "71" ],
-    "baseIri" : "http://purl.org/net/orth",
-    "instances" : 0,
-    "annotations" : {
-      "altLabel" : [ {
-        "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "Living being",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Organism",
-      "en" : "Organism"
-    },
-    "comment" : {
-      "en" : "A living being, such as an animal, a plant, a bacterium, or a fungus., Any individual living (or previously living) being. Example: animal, human being. An organim can be associated to a taxon such as \"Homo Sapiens\", NCBI taxonomy identifier: 9606."
-    },
-    "attributes" : [ "equivalent", "external" ],
-    "id" : "6"
-  }, {
     "iri" : "http://www.ebi.ac.uk/efo/EFO_0000001",
     "baseIri" : "http://www.ebi.ac.uk/efo",
     "instances" : 0,
@@ -1176,12 +1154,34 @@
       "IRI-based" : "EFO_0000001",
       "undefined" : "experimental factor"
     },
-    "subClasses" : [ "2", "72" ],
+    "subClasses" : [ "2", "71" ],
     "comment" : {
       "undefined" : "Concept naming convention is lower case natural naming with spaces, when necessary captials should be used, for example disease factor, HIV, breast carcinoma, Ewing's sarcoma"
     },
     "attributes" : [ "external" ],
     "id" : "39"
+  }, {
+    "iri" : "http://purl.org/net/orth#Organism",
+    "equivalent" : [ "72" ],
+    "baseIri" : "http://purl.org/net/orth",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Living being",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Organism",
+      "en" : "Organism"
+    },
+    "comment" : {
+      "en" : "A living being, such as an animal, a plant, a bacterium, or a fungus., Any individual living (or previously living) being. Example: animal, human being. An organim can be associated to a taxon such as \"Homo Sapiens\", NCBI taxonomy identifier: 9606."
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "6"
   }, {
     "iri" : "http://www.ifomis.org/bfo/1.1/span#ProcessualEntity",
     "baseIri" : "http://www.ifomis.org/bfo/1.1/span",
@@ -1206,7 +1206,7 @@
     },
     "subClasses" : [ "31" ],
     "attributes" : [ "external" ],
-    "id" : "72",
+    "id" : "71",
     "superClasses" : [ "39" ]
   }, {
     "iri" : "http://rdf.ebi.ac.uk/terms/ensembl/protein",
@@ -1260,12 +1260,12 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "Not expressed gene",
+        "value" : "Not expressed sequence unit",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "Not expressed sequence unit",
+        "value" : "Not expressed gene",
         "type" : "label"
       } ],
       "example" : [ {
@@ -1302,17 +1302,17 @@
       "alternative_term" : [ {
         "identifier" : "alternative_term",
         "language" : "undefined",
-        "value" : "developmental_stage",
-        "type" : "label"
-      }, {
-        "identifier" : "alternative_term",
-        "language" : "undefined",
         "value" : "development stage",
         "type" : "label"
       }, {
         "identifier" : "alternative_term",
         "language" : "undefined",
         "value" : "life cycle stage",
+        "type" : "label"
+      }, {
+        "identifier" : "alternative_term",
+        "language" : "undefined",
+        "value" : "developmental_stage",
         "type" : "label"
       } ],
       "example" : [ {
@@ -1331,7 +1331,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "31",
-    "superClasses" : [ "72" ]
+    "superClasses" : [ "71" ]
   }, {
     "iri" : "http://purl.org/net/orth#HomologsCluster",
     "baseIri" : "http://purl.org/net/orth",
@@ -1400,7 +1400,7 @@
       "en" : "A database is a data store such as relational, hierarchical and graph databases."
     },
     "attributes" : [ "external" ],
-    "id" : "92"
+    "id" : "93"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/NCIT_C14250",
     "equivalent" : [ "6" ],
@@ -1411,7 +1411,7 @@
       "undefined" : "Organism"
     },
     "attributes" : [ "equivalent", "external" ],
-    "id" : "71"
+    "id" : "72"
   }, {
     "iri" : "http://purl.org/net/orth#GeneTreeNode",
     "baseIri" : "http://purl.org/net/orth",
@@ -1497,10 +1497,10 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "51",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "52",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "53",
     "type" : "rdfs:SubClassOf"
@@ -1584,10 +1584,10 @@
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "91",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "93",
     "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "92",
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "94",
     "type" : "owl:datatypeProperty"
@@ -1596,10 +1596,10 @@
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "96",
-    "type" : "owl:allValuesFrom"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "97",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "98",
     "type" : "owl:someValuesFrom"
@@ -1652,7 +1652,7 @@
       "IRI-based" : "organism"
     },
     "domain" : "5",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "4"
   }, {
     "range" : "12",
@@ -1695,7 +1695,7 @@
     "comment" : {
       "undefined" : "The rank of a taxon."
     },
-    "attributes" : [ "object", "functional", "external" ],
+    "attributes" : [ "functional", "external", "object" ],
     "id" : "27"
   }, {
     "iri" : "http://purl.org/genex#hasExpressionCondition",
@@ -1770,27 +1770,8 @@
     },
     "superproperty" : [ "46" ],
     "domain" : "15",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "45"
-  }, {
-    "iri" : "http://purl.org/genex#hasSequenceUnit",
-    "baseIri" : "http://purl.org/genex",
-    "range" : "5",
-    "annotations" : {
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "@prefix bgee: <http://bgee.org/#> .\n@prefix oma: <http://omabrowser.org/ontology/oma#GENE_> .\n@prefix orth: <http://purl.org/net/orth#> .\n@prefix genex: <http://purl.org/genex#> .\n\nbgee:EXPRESSION_546588859 rdf:type genex:Expression ;\n    genex:hasSequenceUnit oma:ENSMUSG00000022751 .\noma:ENSMUSG00000022751 a orth:Gene . ",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSequenceUnit",
-      "en" : "has sequence unit"
-    },
-    "domain" : "37",
-    "attributes" : [ "object" ],
-    "id" : "51"
   }, {
     "iri" : "http://purl.uniprot.org/core/commonName",
     "baseIri" : "http://purl.uniprot.org/core",
@@ -1814,7 +1795,26 @@
       "undefined" : "common name"
     },
     "domain" : "15",
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "datatype", "functional", "external" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://purl.org/genex#hasSequenceUnit",
+    "baseIri" : "http://purl.org/genex",
+    "range" : "5",
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "@prefix bgee: <http://bgee.org/#> .\n@prefix oma: <http://omabrowser.org/ontology/oma#GENE_> .\n@prefix orth: <http://purl.org/net/orth#> .\n@prefix genex: <http://purl.org/genex#> .\n\nbgee:EXPRESSION_546588859 rdf:type genex:Expression ;\n    genex:hasSequenceUnit oma:ENSMUSG00000022751 .\noma:ENSMUSG00000022751 a orth:Gene . ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSequenceUnit",
+      "en" : "has sequence unit"
+    },
+    "domain" : "37",
+    "attributes" : [ "object" ],
     "id" : "52"
   }, {
     "range" : "5",
@@ -1852,7 +1852,7 @@
     "comment" : {
       "undefined" : "A resource that is replaced by this resource."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "60"
   }, {
     "iri" : "http://purl.org/genex#hasExpressionCharacteristic",
@@ -1871,7 +1871,7 @@
       "en" : "has expression level characteristic"
     },
     "domain" : "7",
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
     "id" : "62"
   }, {
     "range" : "11",
@@ -1898,7 +1898,7 @@
     "domain" : "5",
     "subproperty" : [ "67", "45", "68" ],
     "comment" : {
-      "en" : "Recommendation: prefer to instatiate 'expressed gene' and 'gene expression experiment condition' classes to represent Gene expression data. For example,  rather than materializing this property at the data store level, it shoud be inferred by applying the logical rules:   \n- 'absence of gene expression'(?e),'has an expression condition'(?e, ?cond), 'has sequence unit'(?e, ?seq) -> 'is absent in'(?seq, ?cond); \n- 'absence of gene expression'?e),'has an expression condition'(?e, ?cond), 'has a developmental stage'(?cond, ?stage), 'has sequence unit'(?e, ?seq) -> 'is absent in'(?seq, ?stage)\n-  'absence of gene expression'(?e),'has an expression condition'(?e, ?cond), 'has strain'(?cond, ?strain), 'has sequence unit'(?e, ?seq) -> 'is absent in'(?seq, ?strain)\n- 'absence of gene expression'(?e),'has an expression condition'(?e, ?cond), 'has anatomical entity'(?cond, ?anat), 'has sequence unit'(?e, ?seq) -> 'is absent in'(?seq, ?anat)\n\nThese rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule Language) rule. It can be tanslated into another semantic web language such as  RIF."
+      "en" : "A sequence unit (e.g. gene) is present (expressed) in some expression condition (e.g. anatomical entity and/or developmental stage). Examples how to assign this property (at a high level of abstraction): GeneA \"is expressed in\" Brain; GeneA \"is expressed in\" adult stage."
     },
     "attributes" : [ "object" ],
     "id" : "46"
@@ -1919,7 +1919,7 @@
       "en" : "has strain"
     },
     "domain" : "3",
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
     "id" : "69"
   }, {
     "range" : "39",
@@ -1950,7 +1950,7 @@
     },
     "superproperty" : [ "46" ],
     "domain" : "15",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "68"
   }, {
     "range" : "64",
@@ -1958,13 +1958,13 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "73"
   }, {
-    "range" : "72",
+    "range" : "71",
     "domain" : "31",
     "attributes" : [ "anonymous", "object" ],
     "id" : "75"
   }, {
     "range" : "39",
-    "domain" : "72",
+    "domain" : "71",
     "attributes" : [ "anonymous", "object" ],
     "id" : "76"
   }, {
@@ -2004,7 +2004,7 @@
       "en" : "has a developmental stage"
     },
     "domain" : "3",
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
     "id" : "81"
   }, {
     "iri" : "http://purl.org/genex#hasSex",
@@ -2034,7 +2034,7 @@
       "IRI-based" : "hasSex"
     },
     "domain" : "3",
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "82"
   }, {
     "iri" : "http://purl.org/dc/terms/identifier",
@@ -2085,7 +2085,7 @@
     "superproperty" : [ "86" ],
     "domain" : "5",
     "comment" : {
-      "en" : "A sequence unit is absent (not expressed) in some expression condition (e.g. anatomical entity and/or developmental stage). Examples how to assign this property (at a high level of abstraction): GeneA \"is absent in\" Brain; GeneA \"is abent in\" adult stage."
+      "en" : "Recommendation: prefer to instatiate 'absence of gene expression' and 'gene expression experiment condition' classes to represent Gene expression data. For example,  rather than materializing this property at the data store level, it shoud be inferred by applying the logical rules:   \nrule1- 'expressed gene'(?e),'has an expression condition'(?e, ?cond), 'has sequence unit'(?e, ?seq) -> 'is expressed in'(?seq, ?cond); \nrule2- 'expressed gene'(?e),'has an expression condition'(?e, ?cond), 'has a developmental stage'(?cond, ?stage), 'has sequence unit'(?e, ?seq) -> 'is expressed in'(?seq, ?stage)\nrule3-  'expressed gene'(?e),'has an expression condition'(?e, ?cond), 'has strain'(?cond, ?strain), 'has sequence unit'(?e, ?seq) -> 'is expressed in'(?seq, ?strain)\nrule4- 'expressed gene'(?e),'has an expression condition'(?e, ?cond), 'has anatomical entity'(?cond, ?anat), 'has sequence unit'(?e, ?seq) -> 'is expressed in'(?seq, ?anat)\n\nThese rules are currently defined in Genex ontology as a SWRL (Semantic Web Rule Language) rule. It can be tanslated into another semantic web language such as  RIF."
     },
     "attributes" : [ "object" ],
     "id" : "85"
@@ -2106,7 +2106,7 @@
       "en" : "has anatomical entity"
     },
     "domain" : "3",
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
     "id" : "87"
   }, {
     "iri" : "http://semanticscience.org/resource/SIO_010078",
@@ -2117,7 +2117,7 @@
       "en" : "encodes"
     },
     "domain" : "15",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "88"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/RO_0002206",
@@ -2151,7 +2151,7 @@
     "superproperty" : [ "86" ],
     "domain" : "43",
     "subproperty" : [ "46" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "66"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/RO_0002162",
@@ -2173,19 +2173,8 @@
     "comment" : {
       "en" : "Connects a biological entity to its taxon of origin."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "allValues", "external", "object" ],
     "id" : "90"
-  }, {
-    "iri" : "http://purl.obolibrary.org/obo/RO_0001018",
-    "baseIri" : "http://purl.obolibrary.org/obo",
-    "range" : "92",
-    "label" : {
-      "IRI-based" : "RO_0001018",
-      "en" : "contained in"
-    },
-    "domain" : "47",
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "91"
   }, {
     "iri" : "http://purl.org/net/orth#organism",
     "baseIri" : "http://purl.org/net/orth",
@@ -2202,8 +2191,19 @@
       "IRI-based" : "organism"
     },
     "domain" : "47",
-    "attributes" : [ "someValues", "object", "external" ],
-    "id" : "93"
+    "attributes" : [ "someValues", "external", "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://purl.obolibrary.org/obo/RO_0001018",
+    "baseIri" : "http://purl.obolibrary.org/obo",
+    "range" : "93",
+    "label" : {
+      "IRI-based" : "RO_0001018",
+      "en" : "contained in"
+    },
+    "domain" : "47",
+    "attributes" : [ "allValues", "external", "object" ],
+    "id" : "92"
   }, {
     "iri" : "http://purl.uniprot.org/core/scientificName",
     "baseIri" : "http://purl.uniprot.org/core",
@@ -2227,7 +2227,7 @@
       "undefined" : "scientific name"
     },
     "domain" : "15",
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "datatype", "functional", "external" ],
     "id" : "94"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/RO_0002162",
@@ -2249,19 +2249,8 @@
     "comment" : {
       "en" : "Connects a biological entity to its taxon of origin."
     },
-    "attributes" : [ "someValues", "object", "external" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "95"
-  }, {
-    "iri" : "http://purl.obolibrary.org/obo/RO_0001018",
-    "baseIri" : "http://purl.obolibrary.org/obo",
-    "range" : "92",
-    "label" : {
-      "IRI-based" : "RO_0001018",
-      "en" : "contained in"
-    },
-    "domain" : "49",
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "96"
   }, {
     "iri" : "http://purl.org/net/orth#organism",
     "baseIri" : "http://purl.org/net/orth",
@@ -2278,7 +2267,18 @@
       "IRI-based" : "organism"
     },
     "domain" : "49",
-    "attributes" : [ "someValues", "object", "external" ],
+    "attributes" : [ "someValues", "external", "object" ],
+    "id" : "96"
+  }, {
+    "iri" : "http://purl.obolibrary.org/obo/RO_0001018",
+    "baseIri" : "http://purl.obolibrary.org/obo",
+    "range" : "93",
+    "label" : {
+      "IRI-based" : "RO_0001018",
+      "en" : "contained in"
+    },
+    "domain" : "49",
+    "attributes" : [ "allValues", "external", "object" ],
     "id" : "97"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CDAO_0000194",
@@ -2289,7 +2289,7 @@
       "undefined" : "part_of"
     },
     "domain" : "8",
-    "attributes" : [ "someValues", "object", "external" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "98"
   }, {
     "iri" : "http://purl.uniprot.org/core/replaces",
@@ -2302,7 +2302,7 @@
     "comment" : {
       "undefined" : "A resource that is replaced by this resource."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "allValues", "external", "object" ],
     "id" : "99"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/RO_0002291",
@@ -2329,7 +2329,7 @@
     },
     "superproperty" : [ "46" ],
     "domain" : "15",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "67"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/RO_0002292",
@@ -2356,7 +2356,7 @@
     "superproperty" : [ "86" ],
     "domain" : "15",
     "subproperty" : [ "100" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "89"
   }, {
     "iri" : "http://purl.org/genex#hasExpressionLevel",
@@ -2381,7 +2381,7 @@
       "en" : "has expression level score"
     },
     "domain" : "7",
-    "attributes" : [ "allValues", "datatype" ],
+    "attributes" : [ "datatype", "allValues" ],
     "id" : "101"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/RO_0002330",
@@ -2407,7 +2407,7 @@
     },
     "domain" : "43",
     "subproperty" : [ "89", "66", "85" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "86"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/RO_0002293",
@@ -2433,7 +2433,7 @@
     },
     "superproperty" : [ "89" ],
     "domain" : "15",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "100"
   }, {
     "iri" : "http://purl.org/genex#hasFDRpvalue",
@@ -2477,7 +2477,7 @@
       "en" : "has expression or absence confidence level"
     },
     "domain" : "42",
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
     "id" : "105"
   }, {
     "iri" : "http://purl.uniprot.org/core/mnemonic",

@@ -8,9 +8,15 @@
 
 <http://purl.org/genex> rdf:type owl:Ontology ;
                          owl:versionIRI <http://purl.org/genex/0.2> ;
-                         owl:imports <http://purl.org/lscr> ;
+                         owl:imports <http://purl.obolibrary.org/obo/caro.owl> ,
+                                     <http://purl.obolibrary.org/obo/iao.owl> ,
+                                     <http://purl.obolibrary.org/obo/ro.owl> ,
+                                     <http://purl.org/lscr> ,
+                                     <http://purl.org/net/orth/2.0> ,
+                                     <http://www.ebi.ac.uk/efo/efo.owl> ,
+                                     <http://www.w3.org/2004/02/skos/core> ;
                          <http://purl.org/dc/terms/abstract> "Expression patterns are a major feature of gene description, and are captured in many expression related databases (e.g., Bgee, Expression Atlas, GENEVESTIGATOR, or Tissue). Yet comparison and interoperability among these heterogeneous data sources or providers is limited by a lack of agreement for describing knowledge of gene expression. Ontologies are recognized as an interesting approach to achieve a consensus for knowledge representation, and allow to leverage semantic interoperability, but are lacking for the domain of gene expression. The Relational Ontology (RO) contains preliminary efforts to define terms for describing this domain. Notably, it contains `expressed in` and `expresses` properties (i.e., relations). Nonetheless, further work was necessary to address the following issue: the representation of additional information related to gene expression, such as developmental stages, as well as absent in and highly expressed relations. Furthermore, we reuse parts of the data schemas of the ORTH and UniProt core ontologies to provide the capacity to interoperate with other biological databases from different knowledge domains which are still relevant to the gene expression domain. Moreover, different gene expression databases use distinct confidence scores to assert expressed in or absent in relations. Finally, we also consider during the GenEx development the cost of materialising all gene expression information and how to mitigate this issue. For example, just for Homo sapiens, we can derive from the Bgee database hundreds of millions of expressed in / absent in assertions (i.e., triples)."@en ;
-                         <http://purl.org/dc/terms/bibliographicCitation> "Ana Claudia Sima, Tarcisio Mendes de Farias, Erich Zbinden, Maria Anisimova, Manuel Gil, Heinz Stockinger, Kurt Stockinger, Marc Robinson-Rechavi, Christophe Dessimoz, Enabling semantic queries across federated bioinformatics databases, Database, Volume 2019, 2019, baz106, https://doi.org/10.1093/database/baz106" ;
+                         <http://purl.org/dc/terms/bibliographicCitation> "Ana Claudia Sima, Tarcisio Mendes de Farias, Erich Zbinden, Maria Anisimova, Manuel Gil, Heinz Stockinger, Kurt Stockinger, Marc Robinson-Rechavi, Christophe Dessimoz, Enabling semantic queries across federated bioinformatics databases, Database, Volume 2019, 2019, baz106, [https://doi.org/10.1093/database/baz106](https://doi.org/10.1093/database/baz106)" ;
                          <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-2170-853X> ,
                                                                 <https://orcid.org/0000-0002-3099-3117> ,
                                                                 <https://orcid.org/0000-0002-3175-5372> ,
@@ -21,7 +27,7 @@
                          <http://purl.org/dc/terms/description> "The GenEx ontology is designed to capture and structure gene expression information provided by databases such as Bgee."@en ;
                          <http://purl.org/dc/terms/issue> "2019-11-07"^^xsd:date ;
                          <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                         <http://purl.org/dc/terms/modified> "2021-06-04"^^xsd:date ;
+                         <http://purl.org/dc/terms/modified> "2024-04-30"^^xsd:date ;
                          <http://purl.org/dc/terms/publisher> <https://www.sib.swiss> ;
                          <http://purl.org/dc/terms/title> "Gene expression (GenEx) ontology"@en ;
                          <http://purl.org/ontology/bibo/status> <http://purl.org/ontology/bibo/status/accepted> ;
@@ -33,8 +39,6 @@
                          rdfs:seeAlso <http://purl.obolibrary.org/obo/ro.owl> ,
                                       <https://bioschemas.org> ,
                                       <https://schema.org> ;
-                         owl:backwardCompatibleWith <http://purl.org/genex/0.1> ;
-                         owl:priorVersion <http://purl.org/genex/0.1> ;
                          owl:versionInfo "0.2" ;
                          <https://w3id.org/widoco/vocab#introduction> """There is a general lack of a comprehensive ontology to serve as a data schema for describing knowledge in the field of gene expression. This may seem surprising, considering the ubiquity of gene expression analyses in molecular biology and the existence of multiple well-established resources for gene expression, such as Bgee, Expression Atlas (EA), GENEVESTIGATOR, RefEx (Reference Expression dataset) or the Tissue Expression database. We note here that different gene expression databases often use distinct criteria to assert expressed in or absent in relations.
 
@@ -42,12 +46,12 @@ To the best of our knowledge, at least 3 semantic models currently exist as init
 
 To provide a first step toward a general-purpose gene expression ontology, we defined a semantic model called GenEx. GenEx is aligned with the Relation Ontology and Expression Atlas models to facilitate interoperability with existing RDF stores. Furthermore, we reuse parts of the data schemas of the ORTH and UniProtKB core ontologies to provide an easy way to interoperate with other biological databases from different knowledge domains that are relevant to the gene expression domain. For example, integrating orthology and gene expression data are relevant since we might want to predict gene expression conservation for orthologous genes.
 
-The GenEx semantic model is designed to capture and structure gene expression information at a higher level relative to others.
-By doing so, we intend to model the data meanings which are expected by the end-users such as biologists. For example, often biologists are not interested in knowing expression scores, that depend on the method used; the data transformations; or the methods used. Rather, for instance, they might look for an interpretation of expression scores, such as whether a gene is highly expressed. 
-This semantic model was defined by using the [OWL 2 Description Logics (DL)](https://www.w3.org/TR/owl2-overview/).
+GenEx is designed to capture and structure gene expression information at a higher level relative to others.
+By doing so, we intend to model the data meanings which are expected by the end-users such as biologists. For example, often biologists are not interested in knowing expression scores, that depend on the method used or data transformations. Rather, for instance, they might look for an interpretation of expression scores, such as whether a gene is highly expressed. 
+GenEx was defined by using the [OWL 2 Description Logics (DL)](https://www.w3.org/TR/owl2-overview/).
 The methodology to develop GenEx was inspired by the Simplified Agile Methodology for Ontology Development [SAMOD](http://essepuntato.github.io/samod/).  
          
-We defined a concept for describing absence of gene expression so-called  [genex:AbsenceExpression](#AbsenceExpression). The  [genex:AbsenceExpression](#AbsenceExpression) class is a subclass of  the complement of [genex:Expression](#Expression) class (i.e.,  [genex:AbsenceExpression](#AbsenceExpression) ⊑ ¬ [genex:Expression](#Expression).  [genex:Expression](#Expression) is the concept for representing gene expression according to a given experimental condition (e.g. sex and anatomical entity). [genex:AbsenceExpression](#AbsenceExpression) is not equivalent to the negation of the  [genex:Expression](#Expression) because it may lack experiments to conclude that a gene is expressed (i.e. missing gene expression information). Therefore, solely data processed from experiments which confirm no presence of expression are described by using the  [genex:AbsenceExpression](#AbsenceExpression) class. We highlight that the [Bgee database](https://bgee.org) provides absence of expression, Bastian et al. in [(1)](#bastian2021) describe how the absence of expression information is computed in the Bgee database by also discussing about expression calls.  
+We defined a concept for describing absence of gene expression so-called  [genex:AbsenceExpression](#AbsenceExpression). The  [genex:AbsenceExpression](#AbsenceExpression) class is a subclass of  the complement of [genex:Expression](#Expression) class (i.e.,  [genex:AbsenceExpression](#AbsenceExpression) ⊑ ¬[genex:Expression](#Expression).  [genex:Expression](#Expression) is the concept for representing gene expression according to a given experimental condition (e.g. sex and anatomical entity). [genex:AbsenceExpression](#AbsenceExpression) is not equivalent to the negation of the  [genex:Expression](#Expression) because it may lack experiments to conclude that a gene is expressed (i.e., missing gene expression information). Therefore, solely data processed from experiments which confirm no presence of expression are described by using the  [genex:AbsenceExpression](#AbsenceExpression) class. We highlight that the [Bgee database](https://bgee.org) provides absence of expression, Bastian et al. in [(1)](https://doi.org/10.1093/nar/gkaa793) describe how the absence of expression information is computed in the Bgee database by also discussing about expression calls.  
 
 We mostly considered to reuse the following ontologies:
 
@@ -96,6 +100,10 @@ As a limitation, at present, GenEx does not support differential expression anal
                                              rdfs:label "elucidation"@en .
 
 
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdfs:range rdfs:Literal .
+
+
 ###  http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
 
@@ -104,16 +112,8 @@ As a limitation, at present, GenEx does not support differential expression anal
 <http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/contributor
-<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/description
@@ -124,169 +124,12 @@ As a limitation, at present, GenEx does not support differential expression anal
 <http://purl.org/dc/terms/issue> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/publisher
 <http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/lscr#xrefEMBLSequence
-<http://purl.org/lscr#xrefEMBLSequence> rdf:type owl:AnnotationProperty ;
-                                        rdfs:comment "This cross-reference relates a given resource to any EMBL sequence database resource."@en ;
-                                        rdfs:label "see also EMBL sequence"@en ;
-                                        rdfs:subPropertyOf rdfs:seeAlso .
-
-
-###  http://purl.org/lscr#xrefEnsembl
-<http://purl.org/lscr#xrefEnsembl> rdf:type owl:AnnotationProperty ;
-                                   rdfs:comment "This cross-reference relates a given resource to any Ensembl database resource."@en ;
-                                   rdfs:label "see also Ensembl cross-reference"@en ;
-                                   rdfs:subPropertyOf rdfs:seeAlso .
-
-
-###  http://purl.org/lscr#xrefEnsemblGene
-<http://purl.org/lscr#xrefEnsemblGene> rdf:type owl:AnnotationProperty ;
-                                       rdfs:comment """This cross-reference relates a given resource to an Ensembl gene.
-
-URI RDF instance template to assign this property: http://rdf.ebi.ac.uk/resource/ensembl/{ENSEMBL_GENE_ID}. Example: :ANY_URI lscr:xrefEnsemblGene http://rdf.ebi.ac.uk/resource/ensembl/ENSG00000139618"""@en ;
-                                       rdfs:label "see also Ensembl gene"@en ;
-                                       rdfs:subPropertyOf <http://purl.org/lscr#xrefEnsembl> ;
-                                       rdfs:range <http://purl.obolibrary.org/obo/SO_0000704> .
-
-
-###  http://purl.org/lscr#xrefEnsemblProtein
-<http://purl.org/lscr#xrefEnsemblProtein> rdf:type owl:AnnotationProperty ;
-                                          rdfs:comment """This cross-reference relates a given resource to an Ensembl protein.
-
-URI RDF instance template to assign this property: http://rdf.ebi.ac.uk/resource/ensembl.protein/{ENSEMBL_PROTEIN_ID}. Example: :ANY_URI lscr:xrefEnsemblProtein http://rdf.ebi.ac.uk/resource/ensembl.protein/ENSP00000296370"""@en ;
-                                          rdfs:label "see also Ensembl protein"@en ;
-                                          rdfs:subPropertyOf <http://purl.org/lscr#xrefEnsembl> ;
-                                          rdfs:range <http://rdf.ebi.ac.uk/terms/ensembl/protein> .
-
-
-###  http://purl.org/lscr#xrefEnsemblTranscript
-<http://purl.org/lscr#xrefEnsemblTranscript> rdf:type owl:AnnotationProperty ;
-                                             rdfs:comment """This cross-reference relates a given resource to an Ensembl transcript.
-
-URI RDF instance template to assign this property: http://rdf.ebi.ac.uk/resource/ensembl.transcript/{ENSEMBL_TRANSCRIPT_ID}. Example: :ANY_URI lscr:xrefEnsemblTranscript http://rdf.ebi.ac.uk/resource/ensembl.transcript/ENST00000380152"""@en ;
-                                             rdfs:label "see also Ensembl transcript"@en ;
-                                             rdfs:subPropertyOf <http://purl.org/lscr#xrefEnsembl> ;
-                                             rdfs:range <http://purl.obolibrary.org/obo/SO_0000673> .
-
-
-###  http://purl.org/lscr#xrefMBGD
-<http://purl.org/lscr#xrefMBGD> rdf:type owl:AnnotationProperty ;
-                                rdfs:comment "This cross-reference relates a given resource to any MBGD database resource.  MBGD: Microbial Genome Database for Comparative Analysis - mbgd.genome.ad.jp ."@en ;
-                                rdfs:label "see also MBGD cross-reference"@en ;
-                                rdfs:subPropertyOf rdfs:seeAlso .
-
-
-###  http://purl.org/lscr#xrefMBGDGene
-<http://purl.org/lscr#xrefMBGDGene> rdf:type owl:AnnotationProperty ;
-                                    rdfs:comment "This cross-reference relates a given resource to an MBGD gene.  MBGD: Microbial Genome Database for Comparative Analysis - mbgd.genome.ad.jp ."@en ;
-                                    rdfs:label "see also MBGD gene"@en ;
-                                    rdfs:subPropertyOf <http://purl.org/lscr#xrefMBGD> .
-
-
-###  http://purl.org/lscr#xrefMBGDGroup
-<http://purl.org/lscr#xrefMBGDGroup> rdf:type owl:AnnotationProperty ;
-                                     rdfs:comment "This cross-reference relates a given resource to an MBGD group of genes.  MBGD: Microbial Genome Database for Comparative Analysis - mbgd.genome.ad.jp ."@en ;
-                                     rdfs:label "see also MBGD gene group"@en ;
-                                     rdfs:subPropertyOf <http://purl.org/lscr#xrefMBGD> .
-
-
-###  http://purl.org/lscr#xrefNCBI
-<http://purl.org/lscr#xrefNCBI> rdf:type owl:AnnotationProperty ;
-                                rdfs:comment """This cross-reference relates a given resource to any NCBI database resource. NCBI: National Center for Biotechnology Information -
-https://www.ncbi.nlm.nih.gov/ ."""@en ;
-                                rdfs:label "see also NCBI cross-reference"@en ;
-                                rdfs:subPropertyOf rdfs:seeAlso .
-
-
-###  http://purl.org/lscr#xrefNCBIGene
-<http://purl.org/lscr#xrefNCBIGene> rdf:type owl:AnnotationProperty ;
-                                    rdfs:comment """This cross-reference relates a given resource to an NCBI gene resource. NCBI: National Center for Biotechnology Information -
-https://www.ncbi.nlm.nih.gov/ ."""@en ;
-                                    rdfs:label "see also NCBI gene"@en ;
-                                    rdfs:subPropertyOf <http://purl.org/lscr#xrefNCBI> .
-
-
-###  http://purl.org/lscr#xrefNCBIProtein
-<http://purl.org/lscr#xrefNCBIProtein> rdf:type owl:AnnotationProperty ;
-                                       rdfs:comment """This cross-reference relates a given resource to an NCBI protein resource. NCBI: National Center for Biotechnology Information -
-https://www.ncbi.nlm.nih.gov/ ."""@en ;
-                                       rdfs:label "see also NCBI protein"@en ;
-                                       rdfs:subPropertyOf <http://purl.org/lscr#xrefNCBI> .
-
-
-###  http://purl.org/lscr#xrefNCBIRefSeq
-<http://purl.org/lscr#xrefNCBIRefSeq> rdf:type owl:AnnotationProperty ;
-                                      rdfs:comment """This cross-reference relates a given resource to an NCBI Reference Sequence Database (RefSeq) resource. NCBI: National Center for Biotechnology Information -
-https://www.ncbi.nlm.nih.gov/ ."""@en ;
-                                      rdfs:label "see also NCBI RefSeq"@en ;
-                                      rdfs:subPropertyOf <http://purl.org/lscr#xrefNCBI> .
-
-
-###  http://purl.org/lscr#xrefOMA
-<http://purl.org/lscr#xrefOMA> rdf:type owl:AnnotationProperty ;
-                               rdfs:comment "This cross-reference relates a given resource to an OMA database resource."@en ;
-                               rdfs:label "see also OMA cross-reference"@en ;
-                               rdfs:subPropertyOf rdfs:seeAlso .
-
-
-###  http://purl.org/lscr#xrefOMAGroup
-<http://purl.org/lscr#xrefOMAGroup> rdf:type owl:AnnotationProperty ;
-                                    rdfs:comment "This cross-reference relates a given resource to an OMA group of sequences (e.g.: proteins)."@en ;
-                                    rdfs:label "see also OMA group"@en ;
-                                    rdfs:subPropertyOf <http://purl.org/lscr#xrefOMA> ;
-                                    rdfs:range <http://purl.org/net/orth#HomologsCluster> .
-
-
-###  http://purl.org/lscr#xrefOMAProtein
-<http://purl.org/lscr#xrefOMAProtein> rdf:type owl:AnnotationProperty ;
-                                      rdfs:comment """This cross-reference relates a given resource to an OMA proteins.
-
-URI RDF instance template to assign this property: http://omabrowser.org/ontology/oma#PROTEIN_{OMA_ID}. Example: :ANY_URI lscr:xrefOMAProtein http://omabrowser.org/ontology/oma#PROTEIN_HUMAN22168"""@en ;
-                                      rdfs:label "see also OMA protein"@en ;
-                                      rdfs:subPropertyOf <http://purl.org/lscr#xrefOMA> ;
-                                      rdfs:range <http://purl.org/net/orth#Protein> .
-
-
-###  http://purl.org/lscr#xrefSwissProt
-<http://purl.org/lscr#xrefSwissProt> rdf:type owl:AnnotationProperty ;
-                                     rdfs:comment """This cross-reference relates a given resource to a UniProt/SwissProt protein.
-URI RDF instance template to assign this property: http://purl.uniprot.org/uniprot/{UNIPROT_ID}. Example: :ANY_URI lscr:xrefSwissProt http://purl.uniprot.org/uniprot/P68871"""@en ;
-                                     rdfs:label "see also UniProt/SwissProt cross-reference"@en ;
-                                     rdfs:subPropertyOf <http://purl.org/lscr#xrefUniprot> ;
-                                     rdfs:range <http://purl.uniprot.org/core/Protein> .
-
-
-###  http://purl.org/lscr#xrefTrEMBL
-<http://purl.org/lscr#xrefTrEMBL> rdf:type owl:AnnotationProperty ;
-                                  rdfs:comment """This cross-reference relates a given resource to a UniProt/TrEMBL protein.
-URI RDF instance template to assign this property: http://purl.uniprot.org/uniprot/{UNIPROT_ID}. Example: :ANY_URI lscr:xrefTrEMBL http://purl.uniprot.org/uniprot/H3BS01"""@en ;
-                                  rdfs:label "see also UniProt/TrEMBL cross-reference"@en ;
-                                  rdfs:subPropertyOf <http://purl.org/lscr#xrefUniprot> ;
-                                  rdfs:range <http://purl.uniprot.org/core/Protein> .
-
-
-###  http://purl.org/lscr#xrefUniprot
-<http://purl.org/lscr#xrefUniprot> rdf:type owl:AnnotationProperty ;
-                                   rdfs:comment """This cross-reference relates a given resource to  a UniProt protein.
-URI RDF instance template to assign this property: http://purl.uniprot.org/uniprot/{UNIPROT_ID}. Example: :ANY_URI lscr:xrefUniprot http://purl.uniprot.org/uniprot/P68871"""@en ;
-                                   rdfs:label "see also UniProt cross-reference"@en ;
-                                   rdfs:subPropertyOf rdfs:seeAlso ;
-                                   rdfs:range <http://purl.uniprot.org/core/Protein> .
 
 
 ###  http://purl.org/net/orth#inDatabase
@@ -743,12 +586,7 @@ oma:ENSMUSG00000002396 rdf:type orth:Gene ;
 #################################################################
 
 ###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:DatatypeProperty ;
-                                              rdfs:range rdfs:Literal ;
-                                              <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
-                                              rdfs:comment "An account of the resource."@en ;
-                                              rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
-                                              rdfs:label "Description"@en .
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/identifier
@@ -947,18 +785,10 @@ up-taxon:10090 rdf:type up:Taxon ;
                                             rdfs:label "polypeptide" .
 
 
-###  http://purl.obolibrary.org/obo/SO_0000673
-<http://purl.obolibrary.org/obo/SO_0000673> rdf:type owl:Class ;
-                                            rdfs:isDefinedBy "https://www.ebi.ac.uk/rdf/documentation/ensembl/" ;
-                                            rdfs:label "Transcript" .
-
-
 ###  http://purl.obolibrary.org/obo/SO_0000704
 <http://purl.obolibrary.org/obo/SO_0000704> rdf:type owl:Class ;
                                             owl:equivalentClass <http://purl.org/net/orth#Gene> ;
-                                            rdfs:isDefinedBy "http://www.ontobee.org/ontology/SO?iri=http://purl.obolibrary.org/obo/SO_0000704" ;
-                                            rdfs:label "Gene" ,
-                                                       "gene" .
+                                            rdfs:label "gene" .
 
 
 ###  http://purl.org/genex#AbsenceExpression
@@ -1108,17 +938,11 @@ bgee:EXPRESSION_CONDITION_134065 rdf:type genex:ExpressionCondition ;
 @prefix obo: <ttp://purl.obolibrary.org/obo/> .
 @prefix oma: <http://omabrowser.org/ontology/oma#GENE_> .
 @prefix orth: <http://purl.org/net/orth#> .
-@prefix lscr: <http://purl.org/lscr#> .
-@prefix up-data: <http://purl.uniprot.org/uniprot/> .
 
 oma:ENSG00000130208 rdf:type orth:Gene ;
     dcterms:description \"apolipoprotein C1 [Source:HGNC Symbol;Acc:HGNC:607]\" ;
     rdfs:label \"first trimester of gestation (cow)\";
-    dcterms:identifier \"ENSG00000130208\" ;
-    rdfs:seeAlso <https://www.bgee.org/bgee15_1/gene/ENSG00000130208> ;
-    lscr:xrefUniprot  up-data:P02654 ; 
-    lscr:xrefEnsemblGene  <http://rdf.ebi.ac.uk/resource/ensembl/ENSG00000130208> . """ ;
-                                rdfs:isDefinedBy "https://github.com/qfo/OrthologyOntology" ;
+    dcterms:identifier \"ENSG00000130208\" .  """ ;
                                 rdfs:label "Gene"@en .
 
 
@@ -1127,12 +951,6 @@ oma:ENSG00000130208 rdf:type orth:Gene ;
                                         rdfs:subClassOf <http://purl.obolibrary.org/obo/CDAO_0000140> ;
                                         rdfs:comment "A node of a tree whose leaf nodes are sequence units and whose internal nodes are clusters of homologs"@en ;
                                         rdfs:label "Gene tree node"@en .
-
-
-###  http://purl.org/net/orth#HomologsCluster
-<http://purl.org/net/orth#HomologsCluster> rdf:type owl:Class ;
-                                           rdfs:comment "Set of homologous sequences"@en ;
-                                           rdfs:label "Cluster of homologous sequences"@en .
 
 
 ###  http://purl.org/net/orth#Organism
@@ -1157,7 +975,6 @@ oma:ENSG00000130208 rdf:type orth:Gene ;
                                                      owl:onProperty <http://purl.obolibrary.org/obo/RO_0001018> ;
                                                      owl:allValuesFrom <http://semanticscience.org/resource/SIO_000750>
                                                    ] ;
-                                   rdfs:isDefinedBy "https://github.com/qfo/OrthologyOntology" ;
                                    rdfs:label "Protein"@en .
 
 
@@ -1179,11 +996,6 @@ oma:ENSG00000130208 rdf:type orth:Gene ;
                                    rdfs:label "gene region"@en ,
                                               "region of a gene"@en ,
                                               "subgene"@en .
-
-
-###  http://purl.uniprot.org/core/Protein
-<http://purl.uniprot.org/core/Protein> rdf:type owl:Class ;
-                                       rdfs:isDefinedBy "http://purl.uniprot.org/core/" .
 
 
 ###  http://purl.uniprot.org/core/Rank
@@ -1210,11 +1022,6 @@ up-taxon:10090 rdf:type up:Taxon ;
                                      rdfs:comment "An element of a taxonomy for classifying life forms." ;
                                      rdfs:label "Taxon" ;
                                      rdfs:seeAlso "http://www.ncbi.nlm.nih.gov/books/NBK54428/" .
-
-
-###  http://rdf.ebi.ac.uk/terms/ensembl/protein
-<http://rdf.ebi.ac.uk/terms/ensembl/protein> rdf:type owl:Class ;
-                                             rdfs:isDefinedBy "https://www.ebi.ac.uk/rdf/documentation/ensembl/" .
 
 
 ###  http://semanticscience.org/resource/SIO_000750
@@ -1364,6 +1171,12 @@ obo:BtauDv_0000007 rdf:type efo:EFO_0000399 ;
 #################################################################
 #    Annotations
 #################################################################
+
+<http://purl.org/dc/elements/1.1/description> <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
+                                              rdfs:comment "An account of the resource."@en ;
+                                              rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                              rdfs:label "Description"@en .
+
 
 <http://purl.org/dc/elements/1.1/identifier> <http://purl.org/dc/terms/description> "Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. "@en ;
                                              rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
