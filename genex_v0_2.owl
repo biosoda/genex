@@ -34,7 +34,7 @@
                          owl:versionInfo "0.2" ;
                          vann:preferredNamespacePrefix "genex" ;
                          terms:abstract "Expression patterns are a major feature of gene description, and are captured in many expression related databases (e.g., Bgee, Expression Atlas, GENEVESTIGATOR, or Tissue). Yet comparison and interoperability among these heterogeneous data sources or providers is limited by a lack of agreement for describing knowledge of gene expression. Ontologies are recognized as an interesting approach to achieve a consensus for knowledge representation, and allow to leverage semantic interoperability, but are lacking for the domain of gene expression. The Relational Ontology (RO) contains preliminary efforts to define terms for describing this domain. Notably, it contains `expressed in` and `expresses` properties (i.e., relations). Nonetheless, further work was necessary to address the following issue: the representation of additional information related to gene expression, such as developmental stages, as well as absent in and highly expressed relations. Furthermore, we reuse parts of the data schemas of the ORTH and UniProt core ontologies to provide the capacity to interoperate with other biological databases from different knowledge domains which are still relevant to the gene expression domain. Moreover, different gene expression databases use distinct confidence scores to assert expressed in or absent in relations. Finally, we also consider during the GenEx development the cost of materialising all gene expression information and how to mitigate this issue. For example, just for Homo sapiens, we can derive from the Bgee database hundreds of millions of expressed in / absent in assertions (i.e., triples)."@en ;
-                         terms:bibliographicCitation "Ana Claudia Sima, Tarcisio Mendes de Farias, Erich Zbinden, Maria Anisimova, Manuel Gil, Heinz Stockinger, Kurt Stockinger, Marc Robinson-Rechavi, Christophe Dessimoz, Enabling semantic queries across federated bioinformatics databases, Database, Volume 2019, 2019, baz106, <a href="https://doi.org/10.1093/database/baz106">https://doi.org/10.1093/database/baz106</a>" ;
+                         terms:bibliographicCitation '''Ana Claudia Sima, Tarcisio Mendes de Farias, Erich Zbinden, Maria Anisimova, Manuel Gil, Heinz Stockinger, Kurt Stockinger, Marc Robinson-Rechavi, Christophe Dessimoz, Enabling semantic queries across federated bioinformatics databases, Database, Volume 2019, 2019, baz106, <a href="https://doi.org/10.1093/database/baz106">https://doi.org/10.1093/database/baz106</a>''' ;
                          terms:license  <https://creativecommons.org/publicdomain/zero/1.0/> ;
                          schema:image <http://biosoda.expasy.org/genex/images/Picture1.png> ;
                          schema:codeRepository "https://github.com/biosoda/genex"^^xsd:anyURI ;
@@ -89,7 +89,17 @@ As a limitation, at present, GenEx does not support differential expression anal
 <https://orcid.org/0000-0002-2170-853X> foaf:name "Christophe Dessimoz"@en ;
   org:memberOf <https://www.sib.swiss> .
 <https://orcid.org/0000-0002-3437-3329> foaf:name "Marc Robinson-Rechavi"@en ;
-  org:memberOf <https://www.sib.swiss> .
+  org:memberOf <https://www.unil.ch> .
+
+<https://www.sib.swiss> rdf:type owl:NamedIndividual ,
+                                   foaf:Organization ;
+                          foaf:homepage "https://www.sib.swiss" ;
+                          foaf:name "SIB Swiss Institute of Bioinformatics"@en .
+
+<https://www.unil.ch> rdf:type owl:NamedIndividual ,
+                                   foaf:Organization ;
+                          foaf:homepage "https://www.unil.ch" ;
+                          foaf:name "University of Lausanne"@en .
 
 <http://purl.uniprot.org/core/Taxon> vann:example 
 '''@prefix up: <http://purl.uniprot.org/core/> .

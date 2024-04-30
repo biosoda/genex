@@ -8,7 +8,7 @@
 <http://purl.org/genex> <http://www.w3.org/2002/07/owl#imports> <http://www.ebi.ac.uk/efo/efo.owl> .
 <http://purl.org/genex> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
 <http://purl.org/genex> <http://purl.org/dc/terms/abstract> "Expression patterns are a major feature of gene description, and are captured in many expression related databases (e.g., Bgee, Expression Atlas, GENEVESTIGATOR, or Tissue). Yet comparison and interoperability among these heterogeneous data sources or providers is limited by a lack of agreement for describing knowledge of gene expression. Ontologies are recognized as an interesting approach to achieve a consensus for knowledge representation, and allow to leverage semantic interoperability, but are lacking for the domain of gene expression. The Relational Ontology (RO) contains preliminary efforts to define terms for describing this domain. Notably, it contains `expressed in` and `expresses` properties (i.e., relations). Nonetheless, further work was necessary to address the following issue: the representation of additional information related to gene expression, such as developmental stages, as well as absent in and highly expressed relations. Furthermore, we reuse parts of the data schemas of the ORTH and UniProt core ontologies to provide the capacity to interoperate with other biological databases from different knowledge domains which are still relevant to the gene expression domain. Moreover, different gene expression databases use distinct confidence scores to assert expressed in or absent in relations. Finally, we also consider during the GenEx development the cost of materialising all gene expression information and how to mitigate this issue. For example, just for Homo sapiens, we can derive from the Bgee database hundreds of millions of expressed in / absent in assertions (i.e., triples)."@en .
-<http://purl.org/genex> <http://purl.org/dc/terms/bibliographicCitation> "Ana Claudia Sima, Tarcisio Mendes de Farias, Erich Zbinden, Maria Anisimova, Manuel Gil, Heinz Stockinger, Kurt Stockinger, Marc Robinson-Rechavi, Christophe Dessimoz, Enabling semantic queries across federated bioinformatics databases, Database, Volume 2019, 2019, baz106, [https://doi.org/10.1093/database/baz106](https://doi.org/10.1093/database/baz106)" .
+<http://purl.org/genex> <http://purl.org/dc/terms/bibliographicCitation> "Ana Claudia Sima, Tarcisio Mendes de Farias, Erich Zbinden, Maria Anisimova, Manuel Gil, Heinz Stockinger, Kurt Stockinger, Marc Robinson-Rechavi, Christophe Dessimoz, Enabling semantic queries across federated bioinformatics databases, Database, Volume 2019, 2019, baz106, <a href=\"https://doi.org/10.1093/database/baz106\">https://doi.org/10.1093/database/baz106</a>" .
 <http://purl.org/genex> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-2170-853X> .
 <http://purl.org/genex> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-3099-3117> .
 <http://purl.org/genex> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-3175-5372> .
@@ -916,6 +916,9 @@ _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.ifomis.org/bfo/1.1/span#ProcessualEntity> <http://www.ebi.ac.uk/efo/NCI_Thesaurus_definition_citation> "NCIt:C29862" .
 <http://www.ifomis.org/bfo/1.1/span#ProcessualEntity> <http://www.w3.org/2000/01/rdf-schema#label> "process" .
 # 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # 
 # 
 # #################################################################
@@ -980,6 +983,18 @@ _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.uniprot.org/core/Species> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.uniprot.org/core/Rank> .
 <http://purl.uniprot.org/core/Species> <http://www.w3.org/2000/01/rdf-schema#label> "Taxonomic rank Species" .
 # 
+# https://www.sib.swiss
+<https://www.sib.swiss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.sib.swiss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<https://www.sib.swiss> <http://xmlns.com/foaf/0.1/homepage> "https://www.sib.swiss" .
+<https://www.sib.swiss> <http://xmlns.com/foaf/0.1/name> "SIB Swiss Institute of Bioinformatics"@en .
+# 
+# https://www.unil.ch
+<https://www.unil.ch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.unil.ch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<https://www.unil.ch> <http://xmlns.com/foaf/0.1/homepage> "https://www.unil.ch" .
+<https://www.unil.ch> <http://xmlns.com/foaf/0.1/name> "University of Lausanne"@en .
+# 
 # 
 # 
 # #################################################################
@@ -1013,7 +1028,7 @@ _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://orcid.org/0000-0002-3175-5372> <http://www.w3.org/ns/org#memberOf> <https://www.sib.swiss> .
 <https://orcid.org/0000-0002-3175-5372> <http://xmlns.com/foaf/0.1/name> "Tarcisio Mendes de Farias"@en .
 # 
-<https://orcid.org/0000-0002-3437-3329> <http://www.w3.org/ns/org#memberOf> <https://www.sib.swiss> .
+<https://orcid.org/0000-0002-3437-3329> <http://www.w3.org/ns/org#memberOf> <https://www.unil.ch> .
 <https://orcid.org/0000-0002-3437-3329> <http://xmlns.com/foaf/0.1/name> "Marc Robinson-Rechavi"@en .
 # 
 <https://orcid.org/0000-0002-9415-5104> <http://www.w3.org/ns/org#memberOf> <https://www.sib.swiss> .
